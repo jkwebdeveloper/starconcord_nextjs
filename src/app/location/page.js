@@ -20,7 +20,7 @@ const Locationpage = () => {
 
     const handleGetLocation = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/locationList", {
+        axios("http://starconcord.com.in/scbk/api/locationList", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -41,7 +41,7 @@ const Locationpage = () => {
 
     const handleGetLocationImages = () => {
         setLoading(true)
-        axios('https://starconcord.onrender.com/api/aboutUsPage', {
+        axios('http://starconcord.com.in/scbk/api/aboutUsPage', {
             headers: {
                 'Content-Type': 'application/json',
             },

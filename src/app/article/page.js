@@ -13,7 +13,7 @@ const Article = () => {
 
   const handleGetArticles = () => {
     setLoading(true)
-    axios('https://starconcord.onrender.com/api/articleList', {
+    axios('http://starconcord.com.in/scbk/api/articleList', {
       headers: {
         'Content-Type': 'application/json',
       },

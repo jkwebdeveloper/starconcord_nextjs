@@ -12,7 +12,7 @@ const IndustriesSection = () => {
 
     const handleGetIndustries = () => {
         setLoading(true);
-        axios('https://starconcord.onrender.com/api/industryList', {
+        axios('http://starconcord.com.in/scbk/api/industryList', {
             headers: {
                 'Content-Type': 'application/json',
             },

@@ -23,7 +23,7 @@ const ArticleDetailspage = () => {
 
         if (!id) return
         setLoading(true)
-        axios.get(`https://starconcord.onrender.com/api/articleList/${id}`, {
+        axios.get(`http://starconcord.com.in/scbk/api/articleList/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
             },

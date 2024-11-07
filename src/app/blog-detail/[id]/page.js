@@ -24,7 +24,7 @@ const BlogDetailsPage = () => {
 
     if (!id) return
     setLoading(true)
-    axios.get(`https://starconcord.onrender.com/api/blogList/${id}`, {
+    axios.get(`http://starconcord.com.in/scbk/api/blogList/${id}`, {
       headers: {
         'Content-Type': 'application/json',
       },

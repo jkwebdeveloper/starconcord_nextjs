@@ -20,7 +20,7 @@ const BlogPage = () => {
 
   const handleGetBlogs = () => {
     setLoading(true);
-    axios("https://starconcord.onrender.com/api/blogList", {
+    axios("http://starconcord.com.in/scbk/api/blogList", {
       headers: { "Content-Type": "application/json" },
       method: "GET",
     })

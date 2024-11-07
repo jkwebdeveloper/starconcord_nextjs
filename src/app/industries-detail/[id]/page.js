@@ -32,7 +32,7 @@ const IndustriesDetail = () => {
 
     const handleGetIndustries = () => {
         setLoading(true);
-        axios.get('https://starconcord.onrender.com/api/industryList', {
+        axios.get('http://starconcord.com.in/scbk/api/industryList', {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -55,7 +55,7 @@ const IndustriesDetail = () => {
     const handleGetIndustriesDetails = (id) => {
         if (!id) return;
         setLoading(true);
-        axios.get(`https://starconcord.onrender.com/api/industryList/${id}`, {
+        axios.get(`http://starconcord.com.in/scbk/api/industryList/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
             },

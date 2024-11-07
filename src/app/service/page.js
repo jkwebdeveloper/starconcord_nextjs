@@ -15,7 +15,7 @@ const ServicePage = () => {
 
     const handleGetService = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/serviceList", {
+        axios("http://starconcord.com.in/scbk/api/serviceList", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -37,7 +37,7 @@ const ServicePage = () => {
 
     const handleGetOtherText = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/otherContent", {
+        axios("http://starconcord.com.in/scbk/api/otherContent", {
             headers: {
                 "Content-Type": "application/json",
             },

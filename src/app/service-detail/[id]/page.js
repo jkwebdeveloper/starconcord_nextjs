@@ -33,7 +33,7 @@ const ServiceDetail = () => {
     const handleGetServiceDetail = (id) => {
         if (!id) return;
         setLoading(true);
-        axios.get(`https://starconcord.onrender.com/api/serviceList/${id}`, {
+        axios.get(`http://starconcord.com.in/scbk/api/serviceList/${id}`, {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -52,7 +52,7 @@ const ServiceDetail = () => {
 
     const handleGetService = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/serviceList", {
+        axios("http://starconcord.com.in/scbk/api/serviceList", {
             headers: {
                 "Content-Type": "application/json",
             },

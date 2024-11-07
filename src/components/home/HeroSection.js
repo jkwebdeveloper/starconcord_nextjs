@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   const handleGetBanners = () => {
     setLoading(true)
-    axios('https://starconcord.onrender.com/api/homePage', {
+    axios('http://starconcord.com.in/scbk/api/homePage', {
       headers: {
         'Content-Type': 'application/json',
       },

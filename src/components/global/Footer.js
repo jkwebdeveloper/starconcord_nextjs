@@ -17,7 +17,7 @@ const Footer = () => {
 
     const handleGetService = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/serviceList", {
+        axios("http://starconcord.com.in/scbk/api/serviceList", {
             headers: {
                 "Content-Type": "application/json",
             },

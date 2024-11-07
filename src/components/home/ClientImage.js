@@ -18,7 +18,7 @@ const ClientImage = () => {
 
     const handleGetImages = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/homePage", {
+        axios("http://starconcord.com.in/scbk/api/homePage", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -39,7 +39,7 @@ const ClientImage = () => {
 
     const handleGetTestimonial = () => {
         setLoading(true);
-        axios("https://starconcord.onrender.com/api/testimonials", {
+        axios("http://starconcord.com.in/scbk/api/testimonials", {
             headers: {
                 "Content-Type": "application/json",
             },
