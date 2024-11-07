@@ -1,36 +1,36 @@
-'use client'
-import CommonBanner from '@/components/global/CommonBanner'
-import PageLoader from '@/components/ui/pageloader'
-import axios from 'axios'
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { FaRegClock } from 'react-icons/fa6'
+"use client";
+import CommonBanner from "@/components/global/CommonBanner";
+import PageLoader from "@/components/ui/pageloader";
+import axios from "axios";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { FaRegClock } from "react-icons/fa6";
 
 const Article = () => {
-  const [articles, setArticles] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  const handleGetArticles = () => {
-    setLoading(true)
-    axios('http://starconcord.com.in/scbk/api/articleList', {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'GET',
-    })
-      .then((res) => {
-        setArticles(res.data.data)
-        setLoading(false)
-      })
-      .catch((err) => {
-        setLoading(false)
-      })
-  }
+  const handleGetArticles = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get(
+        "http://starconcord.com.in/scbk/api/articleList",
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      setArticles(response.data.data);
+    } catch (error) {
+      console.error("Error fetching articles:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    handleGetArticles()
-  }, [])
+    handleGetArticles();
+  }, []);
 
   return (
     <div className="container w-full mx-auto lg:space-y-20 space-y-7">
@@ -57,7 +57,7 @@ const Article = () => {
                         src={`https://starconcord.onrender.com/uploads${item?.image}`}
                         alt={item.title}
                         loading="lazy"
-                        layout="fill"
+                        fill
                         objectFit="cover"
                         quality={100}
                       />
@@ -65,10 +65,10 @@ const Article = () => {
                     <div className="flex items-center gap-2">
                       <FaRegClock className="text-[#6C6C6C] text-lg" />
                       <p className="text-[#6C6C6C] text-lg">
-                        {new Date(item?.createdAt).toLocaleDateString('en-US', {
-                          day: '2-digit',
-                          month: 'short',
-                          year: 'numeric',
+                        {new Date(item?.createdAt).toLocaleDateString("en-US", {
+                          day: "2-digit",
+                          month: "short",
+                          year: "numeric",
                         })}
                       </p>
                     </div>
@@ -86,7 +86,7 @@ const Article = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Article
+export default Article;

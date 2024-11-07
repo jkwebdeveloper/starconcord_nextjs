@@ -8,7 +8,6 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import { LuClock4 } from 'react-icons/lu'
-import { useLocation } from "react-router-dom";
 
 const ArticleDetailspage = () => {
     const [articlesDetails, setArticlesDetails] = useState({})
@@ -33,7 +32,6 @@ const ArticleDetailspage = () => {
 
                 setArticlesDetails(res.data.data);
                 setLoading(false)
-                console.log(res.data.data, "response👍💥😊😊");
             })
             .catch((err) => {
                 console.log(err);
@@ -58,7 +56,7 @@ const ArticleDetailspage = () => {
                             src="/static/images/page title img.jpg"
                             alt='banner'
                             loading="lazy"
-                            layout="fill"
+                            fill
                             objectFit="cover"
                             quality={100}
                             className="rounded-2xl"
@@ -92,7 +90,7 @@ const ArticleDetailspage = () => {
                                         src={`https://starconcord.onrender.com/uploads${articlesDetails?.image}`}
                                         alt='banner'
                                         loading="lazy"
-                                        layout="fill"
+                                        fill
                                         objectFit="cover"
                                         quality={100}
                                         className="rounded-2xl"
@@ -102,7 +100,7 @@ const ArticleDetailspage = () => {
                             <div
                                 className="text-[#6C6C6C] space-y-4 hcontent tag"
                                 dangerouslySetInnerHTML={{
-                                    __html: articlesDetails?.content,
+                                    __html: articlesDetails?.content || "<p>No content available</p>",
                                 }}
                             ></div>
                         </div>
