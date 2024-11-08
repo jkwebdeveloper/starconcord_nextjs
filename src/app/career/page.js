@@ -71,6 +71,7 @@ const Careerpage = ({ title }) => {
       })
       .catch((err) => {
         setLoading(false);
+        console.error("Error fetching careers:", err);
       });
   };
 

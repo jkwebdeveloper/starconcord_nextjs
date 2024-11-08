@@ -136,11 +136,6 @@ import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const ServicePage = () => {
-  if (typeof window === 'undefined') {
-    console.log('Running on the server');
-  } else {
-    console.log('Running on the client');
-  }
   const [service, setService] = useState([]);
   const [otherText, setOtherText] = useState({});
   const [loading, setLoading] = useState(false);
@@ -171,67 +166,62 @@ const ServicePage = () => {
     fetchData();
   }, []);
 
+  if (loading) {
+    return <PageLoader />;
+  }
+
   return (
     <div className="container w-full mx-auto lg:space-y-20 space-y-7">
-      {loading ? (
-        <PageLoader />
-      ) : (
-        <>
-          <CommonBanner
-            image="/static/images/page title img.jpg"
-            title="Services"
-            page="Services"
-          />
-          <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
-            <p className="text-4xl font-bold">{otherText?.serTitle}</p>
-            <p className="text-[#1B1B1B]">{otherText?.serDescription}</p>
-          </div>
-          <div className="px-3 pb-5 space-y-7 lg:px-10">
-            <p className="text-4xl font-semibold">
-              Proficient LCL Consolidation service and much more…
-            </p>
-            <div className="grid items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
-              {service.map(
-                (item) =>
-                  item.serviceType === "IIF" && (
-                    <div
-                      key={item._id}
-                      className="bg-[#F7F9FB] rounded-lg p-5 pb-5 flex flex-col min-h-[350px]"
-                    >
-                      <div className="flex">
-                        <Image
-                          src={`https://starconcord.onrender.com/uploads${item.serviceIconImage}`}
-                          alt={item.serviceName || "Service Image"}
-                          loading="lazy"
-                          width={160}
-                          height={160}
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="flex-grow space-y-4"></div>
-                      <div className="flex-col items-center justify-center w-full gap-3 mt-auto space-y-2">
-                        <p className="text-2xl font-bold pb-2 text-[#104B59]">
-                          {item.serviceName}
+      <CommonBanner
+        image="/static/images/page title img.jpg"
+        title="Services"
+        page="Services"
+      />
+      <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
+        <p className="text-4xl font-bold">{otherText?.serTitle}</p>
+        <p className="text-[#1B1B1B]">{otherText?.serDescription}</p>
+      </div>
+      <div className="px-3 pb-5 space-y-7 lg:px-10">
+        <p className="text-4xl font-semibold">
+          Proficient LCL Consolidation service and much more…
+        </p>
+        <div className="grid items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
+          {service.map(
+            (item) =>
+              item.serviceType === "IIF" && (
+                <div
+                  key={item._id}
+                  className="bg-[#F7F9FB] rounded-lg p-5 pb-5 flex flex-col min-h-[350px]"
+                >
+                  <div className="flex">
+                    <Image
+                      src={`https://starconcord.onrender.com/uploads${item.serviceIconImage}`}
+                      alt={item.serviceName || "Service Image"}
+                      loading="lazy"
+                      width={160}
+                      height={160}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex-grow space-y-4"></div>
+                  <div className="flex-col items-center justify-center w-full gap-3 mt-auto space-y-2">
+                    <p className="text-2xl font-bold pb-2 text-[#104B59]">
+                      {item.serviceName}
+                    </p>
+                    <Link href={`/service-detail/${item._id}`} key={item._id}>
+                      <div className="flex items-center gap-2">
+                        <p className="text-[#104B59] text-sm font-bold">
+                          READ MORE
                         </p>
-                        <Link
-                          href={`/service-detail/${item._id}`}
-                          key={item._id}
-                        >
-                          <div className="flex items-center gap-2">
-                            <p className="text-[#104B59] text-sm font-bold">
-                              READ MORE
-                            </p>
-                            <FaArrowRightLong className="text-[#104B59]" />
-                          </div>
-                        </Link>
+                        <FaArrowRightLong className="text-[#104B59]" />
                       </div>
-                    </div>
-                  )
-              )}
-            </div>
-          </div>
-        </>
-      )}
+                    </Link>
+                  </div>
+                </div>
+              )
+          )}
+        </div>
+      </div>
     </div>
   );
 };

@@ -18,11 +18,7 @@ const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 
 const BlogPage = () => {
 
-  if (typeof window === 'undefined') {
-    console.log('Running on the server');
-  } else {
-    console.log('Running on the client');
-  }
+
   
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -38,6 +34,7 @@ const BlogPage = () => {
         setLoading(false);
       })
       .catch((err) => {
+        console.error("Error fetching blogs:", err);
         setLoading(false);
       });
   };

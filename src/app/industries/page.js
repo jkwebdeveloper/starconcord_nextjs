@@ -62,8 +62,8 @@ const IndustriesSection = () => {
               {industries?.industry && industries.industry.length > 0 ? (
                 industries.industry.map((item) => (
                   <Link
-                    href={`/industries-detail/${item._id}`}
-                    state={{ id: item._id }}
+                    href={`/industries-detail/${item._id}?industryId=${item._id}`}
+                    // state={{ id: item._id }}
                     key={item._id}
                   >
                     <div className="relative">
@@ -88,7 +88,7 @@ const IndustriesSection = () => {
                   </Link>
                 ))
               ) : (
-                <p>No industries available</p>
+                <p>No industries available at the moment. Please check back later.</p>
               )}
             </div>
           </div>
