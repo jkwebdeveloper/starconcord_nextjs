@@ -136,6 +136,11 @@ import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const ServicePage = () => {
+  if (typeof window === 'undefined') {
+    console.log('Running on the server');
+  } else {
+    console.log('Running on the client');
+  }
   const [service, setService] = useState([]);
   const [otherText, setOtherText] = useState({});
   const [loading, setLoading] = useState(false);

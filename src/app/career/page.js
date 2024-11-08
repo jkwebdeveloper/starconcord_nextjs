@@ -51,6 +51,11 @@ const TableCell = dynamic(
 );
 
 const Careerpage = ({ title }) => {
+  if (typeof window === 'undefined') {
+    console.log('Running on the server');
+  } else {
+    console.log('Running on the client');
+  }
   const [careers, setCareers] = useState([]);
   const [loading, setLoading] = useState(false);
 

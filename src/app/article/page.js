@@ -8,6 +8,12 @@ import React, { useEffect, useState } from "react";
 import { FaRegClock } from "react-icons/fa6";
 
 const Article = () => {
+  if (typeof window === 'undefined') {
+    console.log('Running on the server');
+  } else {
+    console.log('Running on the client');
+  }
+  
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
 

@@ -11,6 +11,11 @@ const IndustriesSection = () => {
   const [loading, setLoading] = useState(false);
 
   const handleGetIndustries = () => {
+    if (typeof window === 'undefined') {
+      console.log('Running on the server');
+    } else {
+      console.log('Running on the client');
+    }
     setLoading(true);
     axios("http://starconcord.com.in/scbk/api/industryList", {
       headers: {

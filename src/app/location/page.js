@@ -14,6 +14,12 @@ import { PageLoader } from '@/components';
 import Link from 'next/link';
 
 const Locationpage = () => {
+    if (typeof window === 'undefined') {
+        console.log('Running on the server');
+      } else {
+        console.log('Running on the client');
+      }
+      
     const [locationData, setLocationData] = useState([]);
     const [location, setLocation] = useState({})
     const [loading, setLoading] = useState(false);

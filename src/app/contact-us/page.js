@@ -6,6 +6,11 @@ import React, { useEffect, useState } from 'react';
 import { GoDotFill } from 'react-icons/go';
 
 const ContactUs = () => {
+    if (typeof window === 'undefined') {
+        console.log('Running on the server');
+      } else {
+        console.log('Running on the client');
+      }
     const [loading, setLoading] = useState(false);
     const [location, setLocation] = useState([]);
 
