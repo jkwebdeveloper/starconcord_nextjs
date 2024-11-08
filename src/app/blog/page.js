@@ -14,6 +14,8 @@ const PageLoader = dynamic(() => import("@/components/ui/pageloader"), {
   ssr: false,
 });
 
+const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
+
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -53,7 +55,7 @@ const BlogPage = () => {
               <Link href={`/blog-detail/${item._id}`} key={item._id}>
                 <div className="space-y-3">
                   <div className="relative w-full overflow-hidden h-80 rounded-xl">
-                    <Image
+                    <DynamicImage
                       src={`https://starconcord.onrender.com/uploads${item?.blogImage}`}
                       alt={item.title}
                       loading="lazy"
