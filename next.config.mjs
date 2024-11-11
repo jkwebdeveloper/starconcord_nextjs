@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    // output: 'export',
     reactStrictMode: false,
     images: {
-        domains: ["starconcord.com.in"],
+        domains: ["starconcord.com.in", "starconcord.onrender.com"],
+        // unoptimized: true,
     },
 };
 
