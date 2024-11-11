@@ -17,9 +17,6 @@ const PageLoader = dynamic(() => import("@/components/ui/pageloader"), {
 const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 
 const BlogPage = () => {
-
-
-  
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
 

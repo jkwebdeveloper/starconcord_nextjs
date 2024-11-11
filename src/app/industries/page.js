@@ -6,16 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+
 const IndustriesSection = () => {
   const [industries, setIndustries] = useState({ industry: [] });
   const [loading, setLoading] = useState(false);
 
   const handleGetIndustries = () => {
-    if (typeof window === 'undefined') {
-      console.log('Running on the server');
-    } else {
-      console.log('Running on the client');
-    }
     setLoading(true);
     axios("http://starconcord.com.in/scbk/api/industryList", {
       headers: {
