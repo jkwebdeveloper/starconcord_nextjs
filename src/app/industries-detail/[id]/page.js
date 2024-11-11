@@ -147,7 +147,7 @@ const IndustriesDetail = () => {
                             {industriesDetails ? (
                                 <>
                                     <Image
-                                        src={`https://starconcord.onrender.com/uploads${industriesDetails.banners}`}
+                                        src={`http://starconcord.com.in/scbk/uploads${industriesDetails.banners}`}
                                         loading="lazy"
                                         alt='image'
                                         width={890}

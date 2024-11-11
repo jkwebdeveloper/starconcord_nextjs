@@ -43,7 +43,7 @@ const HeroSection = () => {
           <>
             {/* <Image
               // src={'/static/images/home-banner.jpg'}
-              src={`https://starconcord.onrender.com/uploads${banners.bannerOne}`}
+              src={`http://starconcord.com.in/scbk/uploads${banners.bannerOne}`}
               alt=""
               loading="lazy"
               layout="responsive"
@@ -54,7 +54,7 @@ const HeroSection = () => {
             /> */}
             <div className="relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl">
               <Image
-                src={`https://starconcord.onrender.com/uploads${banners.bannerOne}`}
+                src={`http://starconcord.com.in/scbk/uploads${banners.bannerOne}`}
                 alt=""
                 loading="lazy"
                 layout="fill"

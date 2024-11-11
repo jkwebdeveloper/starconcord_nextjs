@@ -41,7 +41,7 @@ const LocationSection = () => {
                         {location?.locationTitle}
                     </p>
                     <Image
-                        src={`https://starconcord.onrender.com/uploads${location?.locationBanner}`}
+                        src={`http://starconcord.com.in/scbk/uploads${location?.locationBanner}`}
                         alt="banner"
                         loading="lazy"
                         quality={100}

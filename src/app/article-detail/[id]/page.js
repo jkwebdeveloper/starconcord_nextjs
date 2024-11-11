@@ -89,7 +89,7 @@ const ArticleDetailspage = () => {
               {articlesDetails?.image && (
                 <div className="relative w-full h-[450px] rounded-xl">
                   <Image
-                    src={`https://starconcord.onrender.com/uploads${articlesDetails?.image}`}
+                    src={`http://starconcord.com.in/scbk/uploads${articlesDetails?.image}`}
                     alt="banner"
                     loading="lazy"
                     fill

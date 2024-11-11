@@ -95,7 +95,7 @@ const BlogDetailsPage = () => {
               ></div>
               {blogDetails?.blogImage && (
                 <Image
-                  src={`https://starconcord.onrender.com/uploads${blogDetails.blogImage}`}
+                  src={`http://starconcord.com.in/scbk/uploads${blogDetails.blogImage}`}
                   alt='banner'
                   loading="lazy"
                   width={650}
@@ -122,7 +122,7 @@ const BlogDetailsPage = () => {
                 {blogDetails?.image1 && (
                   <div className="">
                     <Image
-                      src={`https://starconcord.onrender.com/uploads${blogDetails.image1}`}
+                      src={`http://starconcord.com.in/scbk/uploads${blogDetails.image1}`}
                       alt="offer1"
                       loading="lazy"
                       width={500}

@@ -145,7 +145,7 @@ const ServiceDetail = () => {
                             {serviceDetails ? (
                                 <>
                                     <Image
-                                        src={`https://starconcord.onrender.com/uploads${serviceDetails?.featuredBanners}`}
+                                        src={`http://starconcord.com.in/scbk/uploads${serviceDetails?.featuredBanners}`}
                                         loading="lazy"
                                         alt=''
                                         width={890}
@@ -170,7 +170,7 @@ const ServiceDetail = () => {
                                                     .map((item) => (
                                                         <div key={item?._id} className="flex items-start gap-3">
                                                             <Image
-                                                                src={`https://starconcord.onrender.com/uploads/${item?.image}`}
+                                                                src={`http://starconcord.com.in/scbk/uploads/${item?.image}`}
                                                                 loading="lazy"
                                                                 width={40}
                                                                 height={40}
@@ -207,7 +207,7 @@ const ServiceDetail = () => {
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div className="flex-1">
                                                         <Image
-                                                            src={`https://starconcord.onrender.com/uploads${serviceDetails.image1}`}
+                                                            src={`http://starconcord.com.in/scbk/uploads${serviceDetails.image1}`}
                                                             loading="lazy"
                                                             width={300}
                                                             height={250}
@@ -220,7 +220,7 @@ const ServiceDetail = () => {
                                                     <div className="flex flex-col justify-between gap-4">
                                                         <div>
                                                             <Image
-                                                                src={`https://starconcord.onrender.com/uploads${serviceDetails.image2}`}
+                                                                src={`http://starconcord.com.in/scbk/uploads${serviceDetails.image2}`}
                                                                 loading="lazy"
                                                                 width={300}
                                                                 height={250}
@@ -232,7 +232,7 @@ const ServiceDetail = () => {
                                                         </div>
                                                         <div>
                                                             <Image
-                                                                src={`https://starconcord.onrender.com/uploads${serviceDetails.image3}`}
+                                                                src={`http://starconcord.com.in/scbk/uploads${serviceDetails.image3}`}
                                                                 loading="lazy"
                                                                 width={300}
                                                                 height={250}

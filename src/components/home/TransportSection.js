@@ -60,7 +60,7 @@ const TransportSection = () => {
                     </div>
                     <div>
                         <Image
-                            src={`https://starconcord.onrender.com/uploads${transport?.topBanner}`}
+                            src={`http://starconcord.com.in/scbk/uploads${transport?.topBanner}`}
                             alt="banner"
                             loading="lazy"
                             width={800}

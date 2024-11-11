@@ -70,7 +70,7 @@ const AboutUs = () => {
                   <div className="flex items-center gap-3 md:gap-16">
                     <p className="font-semibold">CEO {aboutUs?.ceoName}</p>
                     <Image
-                      src={`https://starconcord.onrender.com/uploads${aboutUs?.ceoSignature}`}
+                      src={`http://starconcord.com.in/scbk/uploads${aboutUs?.ceoSignature}`}
                       alt="unsplash"
                       loading="lazy"
                       width={200}
@@ -130,7 +130,7 @@ const AboutUs = () => {
             </div>
             <div className="">
               <Image
-                src={`https://starconcord.onrender.com/uploads${aboutUs?.rightBanner}`}
+                src={`http://starconcord.com.in/scbk/uploads${aboutUs?.rightBanner}`}
                 alt="unsplash"
                 loading="lazy"
                 width={600}
@@ -150,7 +150,7 @@ const AboutUs = () => {
             <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
               <div className="">
                 <Image
-                  src={`https://starconcord.onrender.com/uploads${aboutUs?.secBanner}`}
+                  src={`http://starconcord.com.in/scbk/uploads${aboutUs?.secBanner}`}
                   alt="unsplash"
                   loading="lazy"
                   width={600}
@@ -173,7 +173,7 @@ const AboutUs = () => {
           {/* Why us */}
           <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
             <Image
-              src={`https://starconcord.onrender.com/uploads${aboutUs?.whyusImage}`}
+              src={`http://starconcord.com.in/scbk/uploads${aboutUs?.whyusImage}`}
               alt="unsplash"
               loading="lazy"
               width={600}
@@ -251,7 +251,7 @@ const AboutUs = () => {
                       membershipTab === item.title ? (
                         <div key={item._id}>
                           <Image
-                            src={`https://starconcord.onrender.com/uploads${item.image}`}
+                            src={`http://starconcord.com.in/scbk/uploads${item.image}`}
                             alt={item.title}
                             loading="lazy"
                             width={200}
@@ -285,7 +285,7 @@ const AboutUs = () => {
                     className="p-5 space-y-4 rounded-md cursor-pointer hover:shadow-lg hover:bg-white"
                   >
                     <Image
-                      src={`https://starconcord.onrender.com/uploads${uspsItem.uspsIconImage}`}
+                      src={`http://starconcord.com.in/scbk/uploads${uspsItem.uspsIconImage}`}
                       alt={uspsItem.uspsName}
                       loading="lazy"
                       width={50}
@@ -310,7 +310,7 @@ const AboutUs = () => {
                   className="p-5 space-y-4 rounded-md cursor-pointer hover:shadow-lg hover:bg-white"
                 >
                   <Image
-                    src={`https://starconcord.onrender.com/uploads${uspsItem.uspsIconImage}`}
+                    src={`http://starconcord.com.in/scbk/uploads${uspsItem.uspsIconImage}`}
                     alt={uspsItem.uspsName}
                     loading="lazy"
                     width={50}

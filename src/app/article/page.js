@@ -54,7 +54,7 @@ const Article = () => {
                   <div className="space-y-3" key={item._id}>
                     <div className="relative w-full overflow-hidden h-80 rounded-xl">
                       <Image
-                        src={`https://starconcord.onrender.com/uploads${item?.image}`}
+                        src={`http://starconcord.com.in/scbk/uploads${item?.image}`}
                         alt={item.title}
                         loading="lazy"
                         fill

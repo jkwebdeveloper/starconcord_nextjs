@@ -75,7 +75,7 @@ const OurService = () => {
                         >
                           <div className="flex">
                             <Image
-                              src={`https://starconcord.onrender.com/uploads${item?.serviceIconImage}`}
+                              src={`http://starconcord.com.in/scbk/uploads${item?.serviceIconImage}`}
                               // src="/static/images/Conveyor Belt 1 (2).png"
                               alt="unsplash"
                               loading="lazy"

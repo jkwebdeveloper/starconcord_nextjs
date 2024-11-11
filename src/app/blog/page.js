@@ -57,7 +57,7 @@ const BlogPage = () => {
                 <div className="space-y-3">
                   <div className="relative w-full overflow-hidden h-80 rounded-xl">
                     <DynamicImage
-                      src={`https://starconcord.onrender.com/uploads${item?.blogImage}`}
+                      src={`http://starconcord.com.in/scbk/uploads${item?.blogImage}`}
                       alt={item.title}
                       loading="lazy"
                       layout="fill"

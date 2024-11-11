@@ -86,7 +86,7 @@
 //                       >
 //                         <div className="flex">
 //                           <Image
-//                             src={`https://starconcord.onrender.com/uploads${item.serviceIconImage}`}
+//                             src={`http://starconcord.com.in/scbk/uploads${item.serviceIconImage}`}
 //                             alt="unsplash"
 //                             loading="lazy"
 //                             width={160}
@@ -195,7 +195,7 @@ const ServicePage = () => {
                 >
                   <div className="flex">
                     <Image
-                      src={`https://starconcord.onrender.com/uploads${item.serviceIconImage}`}
+                      src={`http://starconcord.com.in/scbk/uploads${item.serviceIconImage}`}
                       alt={item.serviceName || "Service Image"}
                       loading="lazy"
                       width={160}
@@ -239,7 +239,7 @@ export default ServicePage;
                                             <div className="bg-[#F7F9FB] rounded-lg p-5 pb-5 flex flex-col min-h-[350px]" key={item._id}>
                                                 <div className="flex">
                                                     <Image
-                                                        src={`https://starconcord.onrender.com/uploads${item.serviceIconImage}`}
+                                                        src={`http://starconcord.com.in/scbk/uploads${item.serviceIconImage}`}
                                                         alt="unsplash"
                                                         loading="lazy"
                                                         width={130}
