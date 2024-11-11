@@ -37,7 +37,7 @@ const ServiceImage = () => {
             ) : (
                 <>
                     <Image
-                        src={`http://starconcord.com.in/scbk/uploads${serviceData?.bannerThree}`}
+                        src={`http://starconcord.com.in/scbk/uploads/${serviceData?.bannerThree}`}
                         alt="banner"
                         loading="lazy"
                         width={900}

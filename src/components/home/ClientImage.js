@@ -69,7 +69,7 @@ const ClientImage = () => {
                     <div className='relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl'>
 
                         <Image
-                            src={`http://starconcord.com.in/scbk/uploads${images.bannerTwo}`}
+                            src={`http://starconcord.com.in/scbk/uploads/${images.bannerTwo}`}
                             alt=""
                             loading="lazy"
                             fill
@@ -96,7 +96,7 @@ const ClientImage = () => {
                                             >
                                                 <image
                                                     src={'/static/images/testig.png'}
-                                                    // src={`http://starconcord.com.in/scbk/uploads${item.image}`}
+                                                    // src={`http://starconcord.com.in/scbk/uploads/${item.image}`}
                                                     alt="banner"
                                                     loading="lazy"
                                                     layout="responsive"
@@ -114,7 +114,7 @@ const ClientImage = () => {
                                                     {/* <div className="bg-[#C4C4C4] rounded-full w-14 h-14"></div> */}
                                                     <Image
                                                         // src={'/static/images/home-banner.jpg'}
-                                                        src={`http://starconcord.com.in/scbk/uploads${item.image}`}
+                                                        src={`http://starconcord.com.in/scbk/uploads/${item.image}`}
                                                         alt="banner"
                                                         loading="lazy"
                                                         layout="responsive"

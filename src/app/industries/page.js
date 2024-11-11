@@ -65,7 +65,7 @@ const IndustriesSection = () => {
                     <div className="relative">
                       <div className="relative w-full mx-auto overflow-hidden h-80 rounded-xl">
                         <Image
-                          src={`http://starconcord.com.in/scbk/uploads${item?.banners}`}
+                          src={`http://starconcord.com.in/scbk/uploads/${item?.banners}`}
                           alt={item?.industryName}
                           loading="lazy"
                           layout="fill"

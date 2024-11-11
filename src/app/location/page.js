@@ -77,7 +77,7 @@ const Locationpage = () => {
         ) : (
           <>
             <Image
-              src={`http://starconcord.com.in/scbk/uploads${location?.locationBanner}`}
+              src={`http://starconcord.com.in/scbk/uploads/${location?.locationBanner}`}
               alt="banner"
               loading="lazy"
               quality={100}
