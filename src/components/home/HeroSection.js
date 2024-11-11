@@ -1,39 +1,39 @@
-'use client'
-import axios from 'axios'
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+"use client";
+import axios from "axios";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import PageLoader from '../ui/pageloader'
+import PageLoader from "../ui/pageloader";
 
 const HeroSection = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-  const [banners, setBanners] = useState({})
-  const [loading, setLoading] = useState(false)
+  const [banners, setBanners] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleGetBanners = () => {
-    setLoading(true)
-    axios('http://starconcord.com.in/scbk/api/homePage', {
+    setLoading(true);
+    axios("http://starconcord.com.in/scbk/api/homePage", {
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      method: 'GET',
+      method: "GET",
     })
       .then((res) => {
-        setBanners(res.data.data)
-        setLoading(false)
+        setBanners(res.data.data);
+        setLoading(false);
       })
       .catch((err) => {
-        setLoading(false)
-      })
-  }
+        setLoading(false);
+      });
+  };
 
   useEffect(() => {
-    handleGetBanners()
-  }, [])
+    handleGetBanners();
+  }, []);
   return (
     <div className="container relative w-full mx-auto">
       {loading ? (
@@ -54,7 +54,8 @@ const HeroSection = () => {
             /> */}
             <div className="relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl">
               <Image
-                src={`http://starconcord.com.in/scbk/uploads${banners.bannerOne}`}
+                // src={`http://starconcord.com.in/scbk/uploads${banners.bannerOne}`}
+                src={`http://starconcord.com.in/scbk/uploads${banners["/1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg"]}`}
                 alt=""
                 loading="lazy"
                 layout="fill"
@@ -71,13 +72,15 @@ const HeroSection = () => {
                 ></div>
                 <div
                   className="md:w-1/2 mx-auto mt-2 text-[10px]  text-center text-white lg:mt-4 hcontent tag lg:w-auto lg:text-sm"
-                  dangerouslySetInnerHTML={{ __html: banners?.bannerOneSubText }}
+                  dangerouslySetInnerHTML={{
+                    __html: banners?.bannerOneSubText,
+                  }}
                 ></div>
               </div>
             </div>
             <div className="container absolute bottom-0 grid grid-cols-2 gap-1 p-3 mx-auto text-sm text-white md:grid-cols-4 md:gap-5 lg:p-4 lg:text-lg">
               {banners.bannerLinks.map((item) => {
-                console.log(item)
+                console.log(item);
                 return (
                   <Link href={item?.link} key={item?._id} target="_blank">
                     <div className="px-5 space-y-2" key={item._id}>
@@ -87,14 +90,14 @@ const HeroSection = () => {
                       {/* <hr className="w-[70%] h-0.5 border-t-0 bg-white hover:bg-primary_color dark:bg-white/10" /> */}
                     </div>
                   </Link>
-                )
+                );
               })}
             </div>
           </>
         )
       )}
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
