@@ -3,7 +3,7 @@ const nextConfig = {
     output: 'export',
     reactStrictMode: false,
     images: {
-        domains: ["starconcord.onrender.com"],
+        domains: ["starconcord.com.in"],
     },
 };
 
