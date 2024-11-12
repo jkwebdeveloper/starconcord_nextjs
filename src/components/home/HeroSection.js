@@ -62,7 +62,7 @@ const HeroSection = () => {
                 `${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`
               )}
               <Image
-                src="http://starconcord.com.in/scbk/uploads/[1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg]"
+                src={`http://starconcord.com.in/scbk/uploads/[1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg]`}
                 // src={`${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`}
                 // src={`/scbk/uploads${banners["/1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg"]}`}
                 alt=""
