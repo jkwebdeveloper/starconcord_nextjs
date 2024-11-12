@@ -33,7 +33,7 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "starconcord.com.in",
-        port: "",
+        // port: "",
         pathname: "/scbk/uploads/**",
       },
     ],
