@@ -65,8 +65,8 @@ const ServiceDetail = () => {
                 setLoading(false);
 
                 if (servicesData.length > 0) {
-                    const activeService = servicesData.find(item => item._id === id);
-                    setActiveService(activeService ? activeService._id : servicesData[0]._id);
+                    const activeService = servicesData.find(item => item.alias === id);
+                    setActiveService(activeService ? activeService.alias : servicesData[0].alias);
                 }
             })
             .catch((err) => {
@@ -76,8 +76,8 @@ const ServiceDetail = () => {
     };
 
     const handleServiceClick = (item) => {
-        setActiveService(item._id);
-        router.push(`/service-detail/${item._id}`);
+        setActiveService(item.alias);
+        router.push(`/service-detail/${item.alias}`);
     };
 
     return (

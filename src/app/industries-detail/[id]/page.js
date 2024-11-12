@@ -43,8 +43,8 @@ const IndustriesDetail = () => {
                 if (res.data.data.industry.length > 0) {
                     setActiveIndustry(res.data.data.industry[0]);
                 }
-                const industry = res.data.data.industry.find(item => item._id === id);
-                setActiveIndustry(industry ? industry._id : res.data.data.industry[0]?._id);
+                const industry = res.data.data.industry.find(item => item.alias === id);
+                setActiveIndustry(industry ? industry.alias : res.data.data.industry[0]?.alias);
             })
             .catch((err) => {
                 console.error('API Error:', err);
@@ -71,8 +71,8 @@ const IndustriesDetail = () => {
     };
 
     const handleIndustryClick = (item) => {
-        setActiveIndustry(item._id);
-        router.push(`/industries-detail/${item._id}`)
+        setActiveIndustry(item.alias);
+        router.push(`/industries-detail/${item.alias}`)
         setIndustriesDetails(item);
     };
 

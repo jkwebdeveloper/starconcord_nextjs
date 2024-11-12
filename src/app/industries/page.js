@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-
 const IndustriesSection = () => {
   const [industries, setIndustries] = useState({ industry: [] });
   const [loading, setLoading] = useState(false);
@@ -58,7 +57,7 @@ const IndustriesSection = () => {
               {industries?.industry && industries.industry.length > 0 ? (
                 industries.industry.map((item) => (
                   <Link
-                    href={`/industries-detail/${item.alias}?industryId=${item.alias}`}
+                    href={`/industries-detail/${item.alias}`}
                     // state={{ id: item.alias }}
                     key={item.alias}
                   >
@@ -85,7 +84,10 @@ const IndustriesSection = () => {
                   </Link>
                 ))
               ) : (
-                <p>No industries available at the moment. Please check back later.</p>
+                <p>
+                  No industries available at the moment. Please check back
+                  later.
+                </p>
               )}
             </div>
           </div>
