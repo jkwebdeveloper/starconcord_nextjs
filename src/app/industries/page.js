@@ -65,8 +65,8 @@ const IndustriesSection = () => {
                     <div className="relative">
                       <div className="relative w-full mx-auto overflow-hidden h-80 rounded-xl">
                         <Image
-                          // src={`http://starconcord.com.in/scbk/uploads/${item?.banners}`}
-                          src={`http://starconcord.com.in/scbk/uploads/[1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg]`}
+                          src={`http://starconcord.com.in/scbk/uploads/${item?.banners}`}
+                          // src={`http://starconcord.com.in/scbk/uploads/[1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg]`}
                           alt={item?.industryName}
                           loading="lazy"
                           layout="fill"

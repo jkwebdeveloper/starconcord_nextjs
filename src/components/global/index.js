@@ -266,7 +266,7 @@ const Header = () => {
             >
               <Link href="/industries">
                 <p className="flex items-center gap-2">
-                  Industries
+                  Industriesssssss
                   <FaChevronDown
                     className={`ml-auto min-h-4 min-w-[1rem] group-hover:mb-0 duration-300 group-hover:rotate-180 transition-all `}
                   />
