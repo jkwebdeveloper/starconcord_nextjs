@@ -226,11 +226,11 @@ const Header = () => {
                   <ul className="max-h-full overflow-y-auto font-semibold tracking-wide capitalize">
                     {services.length > 0 ? (
                       services.map((item) => (
-                        <div key={item._id} className="space-y-4">
+                        <div key={item.alias} className="space-y-4">
                           <Link
-                            href={`/service-detail/${item._id}`}
-                            state={{ id: item._id }}
-                            key={item._id}
+                            href={`/service-detail/${item.alias}`}
+                            state={{ id: item.alias }}
+                            key={item.alias}
                           >
                             <li
                               className={`cursor-pointer text-[16px] px-5 py-2 hover:bg-primary_color hover:text-white flex items-center justify-between font-semibold capitalize ${
@@ -238,7 +238,7 @@ const Header = () => {
                                   ? "text-black font-semibold"
                                   : "text-[#6C6C6C] font-normal"
                               }`}
-                              key={item?._id}
+                              key={item?.alias}
                             >
                               <span className="whitespace-nowrap">
                                 {item?.serviceName}
@@ -282,9 +282,9 @@ const Header = () => {
                     {industries?.industry.length > 0 &&
                       industries?.industry.map((item) => (
                         <Link
-                          href={`/industries-detail/${item._id}`}
-                          state={{ id: item._id }}
-                          key={item._id}
+                          href={`/industries-detail/${item.alias}`}
+                          state={{ id: item.alias }}
+                          key={item.alias}
                         >
                           <li
                             className={`cursor-pointer text-[16px] px-5 py-2 hover:bg-primary_color hover:text-white flex items-center justify-between font-semibold capitalize ${
@@ -292,7 +292,7 @@ const Header = () => {
                                 ? "text-black font-semibold"
                                 : "text-[#6C6C6C] font-normal"
                             }`}
-                            key={item?._id}
+                            key={item?.alias}
                           >
                             <span className="whitespace-nowrap">
                               {item?.industryName}

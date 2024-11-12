@@ -117,15 +117,15 @@ const IndustriesDetail = () => {
                             {industries?.industry.length > 0 ? (
                                 industries.industry.map((item) => (
                                     <div
-                                        key={item._id}
+                                        key={item.alias}
                                         className="flex items-center gap-5 cursor-pointer"
                                         onClick={() => handleIndustryClick(item)}
                                     >
                                         <div
-                                            className={`w-0.5 min-h-[25px] ${item._id === activeIndustry ? 'bg-primary_color' : 'bg-[#EBF1E4]'}`}
+                                            className={`w-0.5 min-h-[25px] ${item.alias === activeIndustry ? 'bg-primary_color' : 'bg-[#EBF1E4]'}`}
                                         ></div>
                                         <p
-                                            className={`font-semibold text-xl ${item._id === activeIndustry ? 'text-black' : 'text-[#8C929C]'}`}
+                                            className={`font-semibold text-xl ${item.alias === activeIndustry ? 'text-black' : 'text-[#8C929C]'}`}
                                         >
                                             {item?.industryName}
                                         </p>

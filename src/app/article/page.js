@@ -47,11 +47,11 @@ const Article = () => {
             <div className="grid items-start justify-center gap-5 lg:grid-cols-3">
               {articles.map((item) => (
                 <Link
-                  href={`/article-detail/${item._id}`}
-                  state={{ id: item._id }}
-                  key={item._id}
+                  href={`/article-detail/${item.alias}`}
+                  state={{ id: item.alias }}
+                  key={item.alias}
                 >
-                  <div className="space-y-3" key={item._id}>
+                  <div className="space-y-3" key={item.alias}>
                     <div className="relative w-full overflow-hidden h-80 rounded-xl">
                       <Image
                         src={`http://starconcord.com.in/scbk/uploads/${item?.image}`}

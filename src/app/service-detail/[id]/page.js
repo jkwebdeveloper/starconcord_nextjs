@@ -116,15 +116,15 @@ const ServiceDetail = () => {
                             {service.length > 0 ? (
                                 service.map((item) => (
                                     <div
-                                        key={item._id}
+                                        key={item.alias}
                                         className="flex items-center gap-5 cursor-pointer"
                                         onClick={() => handleServiceClick(item)}
                                     >
                                         <div
-                                            className={`w-0.5 min-h-[25px] ${item._id === activeService ? 'bg-primary_color' : 'bg-[#EBF1E4]'}`}
+                                            className={`w-0.5 min-h-[25px] ${item.alias === activeService ? 'bg-primary_color' : 'bg-[#EBF1E4]'}`}
                                         ></div>
                                         <p
-                                            className={`font-semibold text-xl ${item._id === activeService ? 'text-black' : 'text-[#8C929C]'}`}
+                                            className={`font-semibold text-xl ${item.alias === activeService ? 'text-black' : 'text-[#8C929C]'}`}
                                         >
                                             {item?.serviceName}
                                         </p>

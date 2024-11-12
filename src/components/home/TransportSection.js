@@ -52,7 +52,7 @@ const TransportSection = () => {
                         <div className="text-[#1B1B1B] text-base hcontent tag" dangerouslySetInnerHTML={{ __html: transport?.topContent }}>
 
                         </div>
-                        <Link href="/service-detail/66976cceff68443e1c005c53">
+                        <Link href="/service-detail/lcl-consolidation">
                             <Button variant="primary" className="">
                                 More Details
                             </Button>

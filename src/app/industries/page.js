@@ -58,9 +58,9 @@ const IndustriesSection = () => {
               {industries?.industry && industries.industry.length > 0 ? (
                 industries.industry.map((item) => (
                   <Link
-                    href={`/industries-detail/${item._id}?industryId=${item._id}`}
-                    // state={{ id: item._id }}
-                    key={item._id}
+                    href={`/industries-detail/${item.alias}?industryId=${item.alias}`}
+                    // state={{ id: item.alias }}
+                    key={item.alias}
                   >
                     <div className="relative">
                       <div className="relative w-full mx-auto overflow-hidden h-80 rounded-xl">

@@ -10,6 +10,7 @@ import LocationSection from "@/components/home/Location";
 import PacificSection from "@/components/home/Pacific";
 import TextSection from "@/components/home/TextSection";
 
+
 const AboutUs = () => {
   const [selectedTab, setSelectedTab] = useState("mission");
   const [membershipTab, setmembershipTab] = useState("");

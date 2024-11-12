@@ -16,6 +16,11 @@ const PageLoader = dynamic(() => import("@/components/ui/pageloader"), {
 
 const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 
+
+// import { MetaTags } from "@/constants/metatags";
+
+// export const metadata = MetaTags.blog
+
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -53,7 +58,7 @@ const BlogPage = () => {
         ) : blogs.length > 0 ? (
           <div className="grid items-start justify-center gap-5 lg:grid-cols-3">
             {blogs.map((item) => (
-              <Link href={`/blog-detail/${item._id}`} key={item._id}>
+              <Link href={`/blog-detail/${item.alias}`} key={item.alias}>
                 <div className="space-y-3">
                   <div className="relative w-full overflow-hidden h-80 rounded-xl">
                     <DynamicImage
