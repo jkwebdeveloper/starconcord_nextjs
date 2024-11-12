@@ -27,7 +27,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["starconcord.com.in", "starconcord.onrender.com"],
+    domains: ["starconcord.com.in"],
     unoptimized: true,
     remotePatterns: [
       {

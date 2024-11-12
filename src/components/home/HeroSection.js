@@ -55,6 +55,12 @@ const HeroSection = () => {
               className="w-full h-full rounded-xl "
             /> */}
             <div className="relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl">
+              {console.log("Server URL:", process.env.NEXT_PUBLIC_SERVERURL)}
+              {console.log("Banner Image Path:", banners.bannerOne)}
+              {console.log("Banners object:", banners)}
+              {console.log(
+                `${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`
+              )}
               <Image
                 // src={`http://starconcord.com.in/scbk/uploads/${banners.bannerOne}`}
                 src={`${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`}
@@ -83,7 +89,6 @@ const HeroSection = () => {
             </div>
             <div className="container absolute bottom-0 grid grid-cols-2 gap-1 p-3 mx-auto text-sm text-white md:grid-cols-4 md:gap-5 lg:p-4 lg:text-lg">
               {banners.bannerLinks.map((item) => {
-                console.log(item);
                 return (
                   <Link href={item?.link} key={item?._id} target="_blank">
                     <div className="px-5 space-y-2" key={item._id}>

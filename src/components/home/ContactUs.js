@@ -40,7 +40,6 @@ const GetInTouchSection = () => {
     }, [])
 
     const handlePost = (values, actions) => {
-        console.log(values);
         setLoading(true);
         axios("http://starconcord.com.in/scbk/api/send-meesage", {
             method: "post",
@@ -55,7 +54,6 @@ const GetInTouchSection = () => {
             },
         })
             .then((res) => {
-                console.log(res.data);
                 setLoading(false);
                 toast.success(res.data.massage, {
                     zIndex: "9999px",
@@ -63,7 +61,6 @@ const GetInTouchSection = () => {
                 actions.resetForm(); // Reset form after successful submission
             })
             .catch((err) => {
-                console.log(err, "error");
                 toast.error("Phone is invalid", { duration: 3000 });
                 setLoading(false);
             });
