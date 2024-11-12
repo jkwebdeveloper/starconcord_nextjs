@@ -68,7 +68,7 @@ const ArticleDetailspage = () => {
                 <LuClock4 className="text-lg font-semibold text-primary_color" />
                 <p className="text-lg font-semibold text-primary_color">
                   {articlesDetails
-                    ? format(new Date(articlesDetails?.createdAt), "dd, MMM yyyy")
+                    ? format(Date(articlesDetails?.createdAt), "dd, MMM yyyy")
                     : ""}
                 </p>
               </div>
