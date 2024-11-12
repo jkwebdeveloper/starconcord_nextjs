@@ -41,6 +41,8 @@ const HeroSection = () => {
       ) : (
         banners.bannerOne && (
           <>
+            console.log(`${process.env.NEXT_PUBLIC_SERVERURL}/$
+            {banners.bannerOne}, "banner images"`)
             {/* <Image
               // src={'/static/images/home-banner.jpg'}
               src={`http://starconcord.com.in/scbk/uploads/${banners.bannerOne}`}

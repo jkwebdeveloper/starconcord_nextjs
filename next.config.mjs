@@ -14,11 +14,29 @@
 
 // export default nextConfig;
 
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   images: {
+//     domains: ["starconcord.com.in"],
+//     unoptimized: true,
+//   },
+// };
+
+// export default nextConfig;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["starconcord.com.in"],
+    domains: ["starconcord.com.in", "starconcord.onrender.com"],
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "starconcord.com.in",
+        port: "",
+        pathname: "/scbk/uploads/**",
+      },
+    ],
   },
 };
 
