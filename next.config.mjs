@@ -28,15 +28,15 @@
 const nextConfig = {
   images: {
     domains: ["starconcord.com.in"],
-    // unoptimized: true,
-    // remotePatterns: [
-    //   {
-    //     protocol: "https",
-    //     hostname: "starconcord.com.in",
-    //     // port: "",
-    //     pathname: "/scbk/uploads/**",
-    //   },
-    // ],
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "starconcord.com.in",
+        // port: "",
+        pathname: "/scbk/uploads/**",
+      },
+    ],
   },
 };
 
