@@ -71,7 +71,6 @@ const ApplyNowpage = () => {
     }, [pathname, setValue]);
 
     const handlePost = (values) => {
-        console.log(values);
         if (!values.jobId) {
             toast.error("Job ID is missing.");
             return; // Prevent submission if jobId is empty
@@ -93,14 +92,12 @@ const ApplyNowpage = () => {
             },
         })
             .then((res) => {
-                console.log(res.data, "response+++++++++++++");
                 setLoading(false);
                 setResume(null);
                 toast.success(res.data.message);
                 reset();  // Reset form after successful submission
             })
             .catch((err) => {
-                console.log(err);
                 toast.error("An error occurred, please try again.");
                 setLoading(false);
             });

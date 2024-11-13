@@ -6,7 +6,7 @@ import { RiMenu3Line } from "react-icons/ri";
 import { FaCartShopping, FaChevronRight } from "react-icons/fa6";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
 import axios from "axios";
 import PageLoader from "../ui/pageloader";
@@ -32,7 +32,6 @@ const Header = () => {
         setIndustriesLoading(false);
       })
       .catch((err) => {
-        console.error("API Error:", err);
         setIndustriesLoading(false);
       });
   };
@@ -48,7 +47,6 @@ const Header = () => {
         setServicesLoading(false);
       })
       .catch((err) => {
-        console.error("API Error:", err);
         setServicesLoading(false);
       });
   };
@@ -70,6 +68,9 @@ const Header = () => {
     setActive(link);
     setOpenSidebar(false);
   };
+
+  const pathname = usePathname();
+
   return (
     <div
       className={`bg-white duration-300 transition-all text-black w-full ${
@@ -78,7 +79,7 @@ const Header = () => {
     >
       {/* mobile header start */}
       <div
-        className={`lg:hidden bg-white space-y-5  text-black absolute top-0 -left-1 z-20 min-h-screen max-h-screen min-w-[80%] ${
+        className={`xl:hidden bg-white space-y-5  text-black absolute top-0 -left-1 z-20 min-h-screen max-h-screen min-w-[80%] ${
           openSidebar ? "translate-x-0" : "-translate-x-full"
         } transition duration-300 ease-linear`}
       >
@@ -110,7 +111,7 @@ const Header = () => {
               <li
                 onClick={() => handleLinkClick(link.name)}
                 className={`cursor-pointer text-[16px] font-semibold capitalize ${
-                  active === link.name
+                  pathname === link.href
                     ? "text-black font-semibold"
                     : "text-[#6C6C6C] font-normal"
                 }`}
@@ -132,7 +133,7 @@ const Header = () => {
               <li
                 onClick={() => handleLinkClick(link.name)}
                 className={`cursor-pointer text-[16px] font-semibold capitalize ${
-                  active === link.name
+                  pathname === link.href
                     ? "text-black font-semibold"
                     : "text-[#6C6C6C] font-normal"
                 }`}
@@ -155,13 +156,13 @@ const Header = () => {
       {openSidebar && (
         <div
           onClick={() => setOpenSidebar(false)}
-          className="md:hidden inset-0 z-0 absolute overflow-hidden backdrop-blur-sm bg-lightBlack bg-opacity-50 min-h-screen max-h-screen max-w-[100%]"
+          className="xl:hidden inset-0 z-0 absolute overflow-hidden backdrop-blur-sm bg-lightBlack bg-opacity-50 min-h-screen max-h-screen max-w-[100%]"
         ></div>
       )}
       {openSidebar && (
         <div
           onClick={() => setOpenSidebar(false)}
-          className="lg:hidden inset-0 z-0 absolute overflow-hidden backdrop-blur-sm bg-lightBlack bg-opacity-50 min-h-screen max-h-screen max-w-[100%]"
+          className="xl:hidden inset-0 z-0 absolute overflow-hidden backdrop-blur-sm bg-lightBlack bg-opacity-50 min-h-screen max-h-screen max-w-[100%]"
         ></div>
       )}
       {/* mobile header end */}
@@ -170,15 +171,15 @@ const Header = () => {
         className="container py-3 mx-auto xl:flex xl:justify-between md:items-center"
         id="topMenu"
       >
-        <nav className="container flex items-center justify-between mx-auto">
-          <Link href="/">
+        <nav className="flex items-center justify-between w-full mx-auto ">
+          <Link href="/" className="-ml-6 sm:ml-0">
             <Image
               src={"/static/images/logo_final.png"}
               alt="logo"
               loading="lazy"
               width={200}
               height={200}
-              className="object-cover"
+              className="object-cover "
             />
           </Link>
           <div className=" h-10 hidden xl:flex min-h-[5px] w-0.5 bg-[#CECECE] dark:bg-white/10"></div>
@@ -191,7 +192,7 @@ const Header = () => {
                 <li
                   onClick={() => handleLinkClick(link.name)}
                   className={`cursor-pointer text-[16px] font-semibold capitalize ${
-                    active === link.name
+                    pathname === link.href
                       ? "text-black font-semibold"
                       : "text-[#6C6C6C] font-normal"
                   }`}
@@ -204,19 +205,30 @@ const Header = () => {
             {/* service dropdown  */}
             <div
               className={`cursor-pointer text-[16px] font-semibold capitalize group flex items-center flex-row justify-center gap-1 relative z-10 ${
-                active === "Industries"
+                pathname === "Industries"
                   ? "text-black font-semibold"
                   : "text-[#6C6C6C] font-normal"
               }`}
             >
-              <Link href="/service">
-                <p className="flex items-center gap-2">
-                  Services
-                  <FaChevronDown
-                    className={`ml-auto min-h-4 min-w-[1rem] group-hover:mb-0 duration-300 group-hover:rotate-180 transition-all `}
-                  />
-                </p>
-              </Link>
+              {[
+                { name: "Services", href: "/service" },
+              ].map((link) => (
+                <Link key={link.name} href={link.href}>
+                  <li
+                    onClick={() => handleLinkClick(link.name)}
+                    className={`cursor-pointer flex items-center gap-2 text-[16px] font-semibold capitalize ${
+                      pathname === link.href
+                        ? "text-black font-semibold"
+                        : "text-[#6C6C6C] font-normal"
+                    }`}
+                  >
+                    Services
+                    <FaChevronDown
+                      className={`ml-auto min-h-4 min-w-[1rem] group-hover:mb-0 duration-300 group-hover:rotate-180 transition-all `}
+                    />
+                  </li>
+                </Link>
+              ))}
               {/* dropdown */}
               <div className="absolute overflow-y-auto z-10 min-w-[20rem] group-hover:scale-100 scale-0 custom_scrollbar transition-all origin-top  bg-white text-left ease-in-out duration-300 top-9 -left-5 rounded-lg shadow-2xl text-textColor space-y-2">
                 {/* left side */}
@@ -259,19 +271,30 @@ const Header = () => {
             {/* industries dropdown  */}
             <div
               className={`cursor-pointer text-[16px] font-semibold capitalize group flex items-center flex-row justify-center gap-1 relative z-10 ${
-                active === "Industries"
+                pathname === "Industries"
                   ? "text-black font-semibold"
                   : "text-[#6C6C6C] font-normal"
               }`}
             >
-              <Link href="/industries">
-                <p className="flex items-center gap-2">
-                  Industries
-                  <FaChevronDown
-                    className={`ml-auto min-h-4 min-w-[1rem] group-hover:mb-0 duration-300 group-hover:rotate-180 transition-all `}
-                  />
-                </p>
-              </Link>
+              {[
+                { name: "Industries", href: "/industries" },
+              ].map((link) => (
+                <Link key={link.name} href={link.href}>
+                  <li
+                    onClick={() => handleLinkClick(link.name)}
+                    className={`cursor-pointer flex items-center gap-2 text-[16px] font-semibold capitalize ${
+                      pathname === link.href
+                        ? "text-black font-semibold"
+                        : "text-[#6C6C6C] font-normal"
+                    }`}
+                  >
+                    Industries
+                    <FaChevronDown
+                      className={`ml-auto min-h-4 min-w-[1rem] group-hover:mb-0 duration-300 group-hover:rotate-180 transition-all `}
+                    />
+                  </li>
+                </Link>
+              ))}
               {/* dropdown */}
               <div className="absolute overflow-y-auto z-10 min-w-[20rem] group-hover:scale-100 scale-0 custom_scrollbar transition-all origin-top  bg-white text-left ease-in-out duration-300 top-9 -left-5 rounded-lg shadow-2xl text-textColor space-y-2">
                 {/* left side */}
@@ -316,7 +339,7 @@ const Header = () => {
                 <li
                   onClick={() => handleLinkClick(link.name)}
                   className={`cursor-pointer text-[16px] font-semibold capitalize ${
-                    active === link.name
+                    pathname === link.href
                       ? "text-black font-semibold"
                       : "text-[#6C6C6C] font-normal"
                   }`}

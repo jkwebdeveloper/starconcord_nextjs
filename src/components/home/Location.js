@@ -29,7 +29,7 @@ const LocationSection = () => {
         handleGetLocation()
     }, [])
     return (
-        <div className="container w-full mx-auto space-y-4 text-center">
+        <div className="w-full mx-auto space-y-4 text-center">
             {loading ? (
                 <PageLoader/>
             ) : (

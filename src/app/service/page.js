@@ -177,11 +177,11 @@ const ServicePage = () => {
         title="Services"
         page="Services"
       />
-      <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
+      <div className="grid items-start justify-center gap-5 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
         <p className="text-4xl font-bold">{otherText?.serTitle}</p>
         <p className="text-[#1B1B1B]">{otherText?.serDescription}</p>
       </div>
-      <div className="px-3 pb-5 space-y-7 lg:px-10">
+      <div className="pb-5 space-y-7 lg:px-10">
         <p className="text-4xl font-semibold">
           Proficient LCL Consolidation service and much more…
         </p>

@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className="space-y-6 xl:space-y-14">
             <HeroSection />
-            <div className="container px-3 pb-10 mx-auto space-y-6 xl:space-y-14 lg:px-10">
+            <div className="container pb-10 mx-auto space-y-6 xl:space-y-14 lg:px-10">
                 <TransportSection />
                 <OurService />
                 <OurIndustries />

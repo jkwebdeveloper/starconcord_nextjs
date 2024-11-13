@@ -41,19 +41,6 @@ const HeroSection = () => {
       ) : (
         banners.bannerOne && (
           <>
-            {/* console.log(`${process.env.NEXT_PUBLIC_SERVERURL}/$
-            {banners.bannerOne}, "banner images"`) */}
-            {/* <Image
-              // src={'/static/images/home-banner.jpg'}
-              src={`https://starconcord.com.in/scbk/uploads/${banners.bannerOne}`}
-              alt=""
-              loading="lazy"
-              layout="responsive"
-              objectFit="cover"
-              width={1000}
-              height={1000}
-              className="w-full h-full rounded-xl "
-            /> */}
             <div className="relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl">
               {console.log("Server URL:", process.env.NEXT_PUBLIC_SERVERURL)}
               {console.log("Banner Image Path:", banners.bannerOne)}
@@ -62,11 +49,7 @@ const HeroSection = () => {
                 `${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`
               )}
               <Image
-                // src="https://starconcord.com.in/scbk/uploads/1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg?v=2"
-                // src={`${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`}
                 src={`https://starconcord.com.in/scbk/uploads/${banners.bannerOne}`}
-                // src={`/scbk/uploads/${banners.bannerOne}`}
-                // src={`/scbk/uploads${banners["/1731061631688stock-photo-gateway-of-india-mumbai-maharashtra-india-mumbai-famous-landmark-1640476336.jpg"]}`}
                 alt=""
                 loading="lazy"
                 layout="fill"
@@ -78,11 +61,11 @@ const HeroSection = () => {
             <div className="absolute left-0 flex items-center justify-center w-full h-full md:top-0 -top-6">
               <div className="text-center md:space-y-7">
                 <div
-                  className="md:w-1/2 w-[90%] leading-5 mx-auto text-base font-bold text-center hcontent tag text-white lg:text-5xl"
+                  className="md:w-1/2 w-[90%] leading-8 mx-auto text-base font-bold text-center hcontent tag text-white lg:text-5xl"
                   dangerouslySetInnerHTML={{ __html: banners?.bannerOneText }}
                 ></div>
                 <div
-                  className="md:w-1/2 mx-auto mt-2 text-[10px]  text-center text-white lg:mt-4 hcontent tag lg:w-auto lg:text-sm"
+                  className="md:w-1/2 mx-auto mt-2 text-[12px] px-4 text-center text-white lg:mt-4 hcontent tag lg:w-auto lg:text-sm"
                   dangerouslySetInnerHTML={{
                     __html: banners?.bannerOneSubText,
                   }}
@@ -92,12 +75,11 @@ const HeroSection = () => {
             <div className="container absolute bottom-0 grid grid-cols-2 gap-1 p-3 mx-auto text-sm text-white md:grid-cols-4 md:gap-5 lg:p-4 lg:text-lg">
               {banners.bannerLinks.map((item) => {
                 return (
-                  <Link href={item?.link} key={item?._id} target="_blank">
+                  <Link href={item?.link} key={item?._id}>
                     <div className="px-5 space-y-2" key={item._id}>
                       <p className="cursor-pointer hover:font-semibold w-[70%] leading-10 border-b-2 border-white hover:border-primary_color">
                         {item?.name}
                       </p>
-                      {/* <hr className="w-[70%] h-0.5 border-t-0 bg-white hover:bg-primary_color dark:bg-white/10" /> */}
                     </div>
                   </Link>
                 );

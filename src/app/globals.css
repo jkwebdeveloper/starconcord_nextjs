@@ -214,3 +214,37 @@ body .swiper {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .tag h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .tag h2 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .tag h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .tag h4 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .tag h1 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */

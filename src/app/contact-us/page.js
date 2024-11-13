@@ -23,7 +23,6 @@ const ContactUs = () => {
             method: 'GET',
         })
             .then((res) => {
-                console.log('API Response:', res.data.data); // Debugging log
                 const indiaLocations = res.data.data
                     .flatMap((item) => item.locations)
                     .filter((loc) => loc.country === 'India');

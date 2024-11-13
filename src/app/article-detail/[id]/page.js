@@ -34,7 +34,6 @@ const ArticleDetailspage = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
         setError('Failed to load article. Please try again later.')
         setLoading(false);
       });

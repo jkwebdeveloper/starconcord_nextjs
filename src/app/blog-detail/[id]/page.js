@@ -8,7 +8,6 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import { LuClock4 } from 'react-icons/lu'
-import { useLocation } from "react-router-dom";
 
 
 const BlogDetailsPage = () => {
@@ -34,11 +33,8 @@ const BlogDetailsPage = () => {
 
         setBlogDetails(res.data.data || null);
         setLoading(false)
-        console.log(res.data.data, "response👍💥😊😊");
       })
       .catch((err) => {
-        console.log(err);
-
         setLoading(false)
       })
   }

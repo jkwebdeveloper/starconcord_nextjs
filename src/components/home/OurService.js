@@ -41,7 +41,7 @@ const OurService = () => {
   const showCarouselControls = service?.ourServices?.length >= 6
 
   return (
-    <div className="container w-full mx-auto space-y-6 text-center">
+    <div className="w-full mx-auto space-y-6 text-center">
       <p className="text-xl font-bold lg:text-5xl">
         Other Value-Added Services
       </p>
@@ -61,17 +61,17 @@ const OurService = () => {
                 service.ourServices.map((item) => (
                   <CarouselItem
                     className="md:basis-[50%] xl:basis-[20%] lg:basis-[20%]"
-                    key={item?._id}
+                    key={item?.alias}
                   >
                     <>
                       <Link
-                        href={`/service-detail/${item._id}`}
-                        state={{ id: item._id }}
-                        key={item?._id}
+                        href={`/service-detail/${item.alias}`}
+                        state={{ id: item.alias }}
+                        key={item?.alias}
                       >
                         <div
                           className="bg-[#F7F9FB] rounded-lg p-5 pb-5 flex flex-col min-h-[350px]"
-                          key={item._id}
+                          key={item.alias}
                         >
                           <div className="flex">
                             <Image

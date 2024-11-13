@@ -61,7 +61,7 @@ const ClientImage = () => {
 
 
     return (
-        <div className="container relative w-full p-2 mx-auto space-y-2 text-center lg:space-y-4">
+        <div className="relative w-full p-2 mx-auto space-y-2 text-center lg:space-y-4">
             {loading ? (
                 <PageLoader />
             ) : (

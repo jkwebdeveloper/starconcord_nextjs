@@ -31,7 +31,7 @@ const TextSection = () => {
 
     return (
         <div className="w-full bg-[#F7F9FB]">
-            <div className="container relative w-full p-2 px-5 py-10 mx-auto space-y-2 lg:px-10 lg:space-y-4">
+            <div className="relative w-full p-2 px-5 py-10 mx-auto space-y-2 lg:px-10 lg:space-y-4">
                 {loading ? (
                     <PageLoader/>
                 ) : (

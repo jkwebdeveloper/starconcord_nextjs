@@ -39,7 +39,7 @@ const OurIndustriesSection = () => {
         handleGetIndustries();
     }, []);
     return (
-        <div className="container w-full mx-auto space-y-10">
+        <div className="w-full mx-auto space-y-10">
             <p className="text-xl font-bold text-center lg:text-5xl">
                 Industries We Serve
             </p>
@@ -50,7 +50,7 @@ const OurIndustriesSection = () => {
                     <div className="grid items-start justify-center grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                         {industries?.ourIndustries && industries.ourIndustries.length > 0 ? (
                             industries.ourIndustries.map(item => (
-                                <Link href={`/industries-detail/${item._id}`} state={{ id: item._id }} key={item._id}>
+                                <Link href={`/industries-detail/${item.alias}`} state={{ id: item.alias }} key={item.alias}>
                                     <div className="relative">
                                         <div className="relative w-full mx-auto overflow-hidden h-80 rounded-xl">
                                             <Image

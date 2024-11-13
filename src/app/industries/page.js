@@ -19,7 +19,6 @@ const IndustriesSection = () => {
       method: "GET",
     })
       .then((res) => {
-        console.log("API Response:", res.data.data);
         setIndustries(res.data.data || { industry: [] });
         setLoading(false);
       })
@@ -44,7 +43,7 @@ const IndustriesSection = () => {
             title="Industries"
             page="Industries"
           />
-          <div className="px-10 pb-20 space-y-14">
+          <div className="px-0 pb-20 xl:px-10 space-y-14">
             <div className="grid items-center grid-cols-1 gap-3 md:grid-cols-2">
               <p className="text-4xl font-bold text-[#1B1B1B]">
                 {industries?.config?.indTitle}

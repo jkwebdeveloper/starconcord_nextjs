@@ -1,6 +1,4 @@
 'use client';
-import CommonBanner from '@/components/global/CommonBanner';
-import GetInTouchSection from '@/components/home/ContactUs';
 import { Button } from '@/components/ui/button';
 import axios from 'axios';
 import Image from 'next/image';
@@ -40,7 +38,6 @@ const ServiceDetail = () => {
             method: "GET",
         })
             .then((res) => {
-                console.log(res.data, 'service details');
                 setServiceDetails(res.data.data || {});
                 setLoading(false);
             })
@@ -59,7 +56,6 @@ const ServiceDetail = () => {
             method: "GET",
         })
             .then((res) => {
-                console.log(res.data);
                 const servicesData = res.data.data || [];
                 setService(servicesData);
                 setLoading(false);
@@ -105,8 +101,8 @@ const ServiceDetail = () => {
                     </div>
                 </div>
             </div>
-            <div className="container flex flex-col min-h-[55dvh] gap-10 px-1 md:flex-row md:px-5 relative mt-[-3rem] z-[2] md:mb-10">
-                <div className="h-fit min-h-[350px] md:w-[40%] lg:w-[25%] w-[90%] mx-auto space-y-5">
+            <div className="flex flex-col min-h-[55dvh] gap-10 md:flex-row md:px-5 relative mt-[-3rem] z-[2] md:mb-10">
+                <div className="h-fit min-h-[350px] md:w-[40%] lg:w-[25%] w-[95%] mx-auto space-y-5">
                     <div className="space-y-4">
                         <p className="text-xl font-semibold">
                             Services
@@ -137,7 +133,7 @@ const ServiceDetail = () => {
                     </div>
                 </div>
                 <div className="inline-block h-auto w-0.5 self-stretch bg-[#dfdfdf] dark:bg-white/10"></div>
-                <div className="md:w-[70%] w-[90%] mx-auto space-y-5 h-fit min-h-[350px]">
+                <div className="md:w-[70%] w-[95%] mx-auto space-y-5 h-fit min-h-[350px]">
                     {loading ? (
                         <PageLoader />
                     ) : Object.keys(serviceDetails).length > 0 ? (

@@ -49,7 +49,7 @@ const PacificSection = () => {
     const { numberPart, letterPart } = parseKTEUS(pacific.kteus || '');
 
     return (
-        <div className="container w-full mx-auto space-y-5">
+        <div className="w-full mx-auto space-y-5">
             {/* <h2 className="text-4xl font-bold text-center text-black">
                 Pacific Star Group
             </h2> */}

@@ -10,7 +10,6 @@ import LocationSection from "@/components/home/Location";
 import PacificSection from "@/components/home/Pacific";
 import TextSection from "@/components/home/TextSection";
 
-
 const AboutUs = () => {
   const [selectedTab, setSelectedTab] = useState("mission");
   const [membershipTab, setmembershipTab] = useState("");
@@ -26,7 +25,6 @@ const AboutUs = () => {
       method: "GET",
     })
       .then((res) => {
-        console.log(res.data, "response");
         setmembershipTab(res.data.data?.certificateList?.[0]?.title || "");
         setAboutUs(res.data.data);
         setLoading(false);
@@ -54,7 +52,7 @@ const AboutUs = () => {
             page="About us"
           />
           {/* About company Sevtion */}
-          <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
+          <div className="grid items-start justify-center gap-5 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
             <div className="w-full text-[#1B1B1B] space-y-20">
               <div className="space-y-10">
                 <div className="space-y-4">
@@ -129,7 +127,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className="">
+            <div className="w-full">
               <Image
                 src={`https://starconcord.com.in/scbk/uploads/${aboutUs?.rightBanner}`}
                 alt="unsplash"
@@ -148,7 +146,7 @@ const AboutUs = () => {
           {aboutUs?.secBanner &&
           aboutUs?.secContentTitle &&
           aboutUs?.secContent ? (
-            <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
+            <div className="grid items-start justify-center gap-5 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
               <div className="">
                 <Image
                   src={`https://starconcord.com.in/scbk/uploads/${aboutUs?.secBanner}`}
@@ -172,7 +170,7 @@ const AboutUs = () => {
           ) : null}
 
           {/* Why us */}
-          <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
+          <div className="grid items-start justify-center gap-5 lg:px-10 lg:grid-cols-2 xl:gap-40 md:gap-20">
             <Image
               src={`https://starconcord.com.in/scbk/uploads/${aboutUs?.whyusImage}`}
               alt="unsplash"
@@ -206,8 +204,8 @@ const AboutUs = () => {
           </div>
 
           {/* Accreditations */}
-          <div className="container w-full px-5 mx-auto lg:space-y-20 space-y-7 lg:px-10">
-            <div className="px-3 space-y-8 lg:px-10">
+          <div className="w-full mx-auto lg:space-y-20 space-y-7 lg:px-10">
+            <div className="space-y-8 lg:px-10">
               <p className="text-xl font-bold lg:text-5xl">
                 Accreditations / Alliances / Memberships
               </p>
@@ -270,8 +268,8 @@ const AboutUs = () => {
           </div>
 
           {/* Our USPS */}
-          <div className="px-5 pb-10 space-y-10 lg:px-10">
-            <div className="grid items-start justify-center gap-5 px-3 lg:px-10 lg:grid-cols-2">
+          <div className="pb-10 space-y-10 lg:px-10">
+            <div className="grid items-start justify-center gap-5 lg:px-10 lg:grid-cols-2">
               <div className="space-y-3">
                 <p className="text-4xl font-bold">Our USPs</p>
                 <div

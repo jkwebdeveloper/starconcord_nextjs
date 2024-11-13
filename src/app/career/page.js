@@ -51,11 +51,7 @@ const TableCell = dynamic(
 );
 
 const Careerpage = ({ title }) => {
-  if (typeof window === 'undefined') {
-    console.log('Running on the server');
-  } else {
-    console.log('Running on the client');
-  }
+  
   const [careers, setCareers] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -89,7 +85,7 @@ const Careerpage = ({ title }) => {
       {loading ? (
         <PageLoader />
       ) : (
-        <div className="container px-3 pb-10 space-y-10 lg:px-10">
+        <div className="pb-10 space-y-10 lg:px-10">
           <div className="space-y-4">
             <p className="text-3xl font-semibold">JOIN THE STAR CONCORD INDIA TEAM</p>
             <p className="text-base md:text-lg">
@@ -110,7 +106,7 @@ const Careerpage = ({ title }) => {
                 value={`item-${index}`}
                 className="p-3 space-y-4 text-black border border-gray-400"
               >
-                <AccordionTrigger className="flex items-center justify-between text-3xl font-bold cursor-pointer">
+                <AccordionTrigger className="flex items-center justify-between gap-4 text-3xl font-bold cursor-pointer md:gap-0">
                   <p className="text-sm font-semibold text-left uppercase md:text-base text-primary_color">
                     {career.title}
                   </p>

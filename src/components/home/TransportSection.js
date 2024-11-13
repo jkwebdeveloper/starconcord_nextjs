@@ -37,7 +37,7 @@ const TransportSection = () => {
     }, []);
 
     return (
-        <div className="container w-full mx-auto">
+        <div className="w-full mx-auto">
             {loading ? (
                 <div className='flex items-center justify-center'>
                     <PageLoader />
