@@ -17,7 +17,7 @@ const Footer = () => {
 
     const handleGetService = () => {
         setLoading(true);
-        axios("http://starconcord.com.in/scbk/api/serviceList", {
+        axios("https://starconcord.com.in/scbk/api/serviceList", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -99,10 +99,10 @@ const Footer = () => {
                                         {service.length > 0 ? (
                                             service.map((item) => (
                                                 <div
-                                                    key={item._id}
+                                                    key={item.alias}
                                                     className="space-y-4"
                                                 >
-                                                    <Link href={`/service-detail/${item._id}`} state={{ id: item._id }} key={item?._id}>
+                                                    <Link href={`/service-detail/${item.alias}`} state={{ id: item.alias }} key={item?.alias}>
                                                         <p
                                                             className=""
                                                         >

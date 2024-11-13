@@ -23,7 +23,7 @@ const ArticleDetailspage = () => {
     setError(null);
 
     axios
-      .get(`http://starconcord.com.in/scbk/api/articleList/${id}`, {
+      .get(`https://starconcord.com.in/scbk/api/articleList/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -89,7 +89,7 @@ const ArticleDetailspage = () => {
               {articlesDetails?.image && (
                 <div className="relative w-full h-[450px] rounded-xl">
                   <Image
-                    src={`http://starconcord.com.in/scbk/uploads/${articlesDetails?.image}`}
+                    src={`https://starconcord.com.in/scbk/uploads/${articlesDetails?.image}`}
                     alt="banner"
                     loading="lazy"
                     fill

@@ -15,7 +15,7 @@ const Article = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "http://starconcord.com.in/scbk/api/articleList",
+        "https://starconcord.com.in/scbk/api/articleList",
         {
           headers: { "Content-Type": "application/json" },
         }
@@ -54,7 +54,7 @@ const Article = () => {
                   <div className="space-y-3" key={item.alias}>
                     <div className="relative w-full overflow-hidden h-80 rounded-xl">
                       <Image
-                        src={`http://starconcord.com.in/scbk/uploads/${item?.image}`}
+                        src={`https://starconcord.com.in/scbk/uploads/${item?.image}`}
                         alt={item.title}
                         loading="lazy"
                         fill

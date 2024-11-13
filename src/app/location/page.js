@@ -20,7 +20,7 @@ const Locationpage = () => {
 
   const handleGetLocation = () => {
     setLoading(true);
-    axios("http://starconcord.com.in/scbk/api/locationList", {
+    axios("https://starconcord.com.in/scbk/api/locationList", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -41,7 +41,7 @@ const Locationpage = () => {
 
   const handleGetLocationImages = () => {
     setLoading(true);
-    axios("http://starconcord.com.in/scbk/api/aboutUsPage", {
+    axios("https://starconcord.com.in/scbk/api/aboutUsPage", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -77,7 +77,7 @@ const Locationpage = () => {
         ) : (
           <>
             <Image
-              src={`http://starconcord.com.in/scbk/uploads/${location?.locationBanner}`}
+              src={`https://starconcord.com.in/scbk/uploads/${location?.locationBanner}`}
               alt="banner"
               loading="lazy"
               quality={100}

@@ -61,7 +61,7 @@ const Careerpage = ({ title }) => {
 
   const handleGetCareers = () => {
     setLoading(true);
-    axios("http://starconcord.com.in/scbk/api/careerList", {
+    axios("https://starconcord.com.in/scbk/api/careerList", {
       headers: { "Content-Type": "application/json" },
       method: "GET",
     })

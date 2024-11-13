@@ -23,7 +23,7 @@ const Header = () => {
 
   const handleGetIndustries = () => {
     setIndustriesLoading(true);
-    axios("http://starconcord.com.in/scbk/api/industryList", {
+    axios("https://starconcord.com.in/scbk/api/industryList", {
       headers: { "Content-Type": "application/json" },
       method: "GET",
     })
@@ -39,7 +39,7 @@ const Header = () => {
 
   const handleGetService = () => {
     setServicesLoading(true);
-    axios("http://starconcord.com.in/scbk/api/serviceList", {
+    axios("https://starconcord.com.in/scbk/api/serviceList", {
       headers: { "Content-Type": "application/json" },
       method: "GET",
     })

@@ -10,7 +10,7 @@ const TextSection = () => {
 
     const handleGetText = () => {
         setLoading(true);
-        axios("http://starconcord.com.in/scbk/api/aboutUsPage", {
+        axios("https://starconcord.com.in/scbk/api/aboutUsPage", {
             headers: {
                 "Content-Type": "application/json",
             },

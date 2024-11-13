@@ -20,7 +20,7 @@ const GetInTouchSection = () => {
 
     const handleGetContact = () => {
         setLoading(true)
-        axios('http://starconcord.com.in/scbk/api/contactUs', {
+        axios('https://starconcord.com.in/scbk/api/contactUs', {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -41,7 +41,7 @@ const GetInTouchSection = () => {
 
     const handlePost = (values, actions) => {
         setLoading(true);
-        axios("http://starconcord.com.in/scbk/api/send-meesage", {
+        axios("https://starconcord.com.in/scbk/api/send-meesage", {
             method: "post",
             data: {
                 email: values.email,

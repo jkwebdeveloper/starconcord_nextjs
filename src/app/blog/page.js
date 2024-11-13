@@ -27,7 +27,7 @@ const BlogPage = () => {
 
   const handleGetBlogs = () => {
     setLoading(true);
-    axios("http://starconcord.com.in/scbk/api/blogList", {
+    axios("https://starconcord.com.in/scbk/api/blogList", {
       headers: { "Content-Type": "application/json" },
       method: "GET",
     })
@@ -62,7 +62,7 @@ const BlogPage = () => {
                 <div className="space-y-3">
                   <div className="relative w-full overflow-hidden h-80 rounded-xl">
                     <DynamicImage
-                      src={`http://starconcord.com.in/scbk/uploads/${item?.blogImage}`}
+                      src={`https://starconcord.com.in/scbk/uploads/${item?.blogImage}`}
                       alt={item.title}
                       loading="lazy"
                       layout="fill"

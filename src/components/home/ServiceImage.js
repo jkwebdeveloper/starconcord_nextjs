@@ -12,7 +12,7 @@ const ServiceImage = () => {
 
     const handleGetTransport = () => {
         setLoading(true);
-        axios("http://starconcord.com.in/scbk/api/homePage", {
+        axios("https://starconcord.com.in/scbk/api/homePage", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -37,7 +37,7 @@ const ServiceImage = () => {
             ) : (
                 <>
                     <Image
-                        src={`http://starconcord.com.in/scbk/uploads/${serviceData?.bannerThree}`}
+                        src={`https://starconcord.com.in/scbk/uploads/${serviceData?.bannerThree}`}
                         alt="banner"
                         loading="lazy"
                         width={900}

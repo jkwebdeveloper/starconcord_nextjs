@@ -10,7 +10,7 @@ const LocationSection = () => {
 
     const handleGetLocation = () => {
         setLoading(true)
-        axios('http://starconcord.com.in/scbk/api/aboutUsPage', {
+        axios('https://starconcord.com.in/scbk/api/aboutUsPage', {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -41,7 +41,7 @@ const LocationSection = () => {
                         {location?.locationTitle}
                     </p>
                     <Image
-                        src={`http://starconcord.com.in/scbk/uploads/${location?.locationBanner}`}
+                        src={`https://starconcord.com.in/scbk/uploads/${location?.locationBanner}`}
                         alt="banner"
                         loading="lazy"
                         quality={100}

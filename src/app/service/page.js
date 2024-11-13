@@ -15,7 +15,7 @@
 
 //   const handleGetService = () => {
 //     setLoading(true);
-//     axios("http://starconcord.com.in/scbk/api/serviceList", {
+//     axios("https://starconcord.com.in/scbk/api/serviceList", {
 //       headers: {
 //         "Content-Type": "application/json",
 //       },
@@ -37,7 +37,7 @@
 
 //   const handleGetOtherText = () => {
 //     setLoading(true);
-//     axios("http://starconcord.com.in/scbk/api/otherContent", {
+//     axios("https://starconcord.com.in/scbk/api/otherContent", {
 //       headers: {
 //         "Content-Type": "application/json",
 //       },
@@ -86,7 +86,7 @@
 //                       >
 //                         <div className="flex">
 //                           <Image
-//                             src={`http://starconcord.com.in/scbk/uploads/${item.serviceIconImage}`}
+//                             src={`https://starconcord.com.in/scbk/uploads/${item.serviceIconImage}`}
 //                             alt="unsplash"
 //                             loading="lazy"
 //                             width={160}
@@ -146,10 +146,10 @@ const ServicePage = () => {
         setLoading(true);
 
         const [serviceRes, otherTextRes] = await Promise.all([
-          axios.get("http://starconcord.com.in/scbk/api/serviceList", {
+          axios.get("https://starconcord.com.in/scbk/api/serviceList", {
             headers: { "Content-Type": "application/json" },
           }),
-          axios.get("http://starconcord.com.in/scbk/api/otherContent", {
+          axios.get("https://starconcord.com.in/scbk/api/otherContent", {
             headers: { "Content-Type": "application/json" },
           }),
         ]);
@@ -195,7 +195,7 @@ const ServicePage = () => {
                 >
                   <div className="flex">
                     <Image
-                      src={`http://starconcord.com.in/scbk/uploads/${item.serviceIconImage}`}
+                      src={`https://starconcord.com.in/scbk/uploads/${item.serviceIconImage}`}
                       alt={item.serviceName || "Service Image"}
                       loading="lazy"
                       width={160}
@@ -239,7 +239,7 @@ export default ServicePage;
                                             <div className="bg-[#F7F9FB] rounded-lg p-5 pb-5 flex flex-col min-h-[350px]" key={item._id}>
                                                 <div className="flex">
                                                     <Image
-                                                        src={`http://starconcord.com.in/scbk/uploads/${item.serviceIconImage}`}
+                                                        src={`https://starconcord.com.in/scbk/uploads/${item.serviceIconImage}`}
                                                         alt="unsplash"
                                                         loading="lazy"
                                                         width={130}

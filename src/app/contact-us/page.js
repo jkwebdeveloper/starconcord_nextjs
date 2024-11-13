@@ -16,7 +16,7 @@ const ContactUs = () => {
 
     const handleGetLocation = () => {
         setLoading(true);
-        axios('http://starconcord.com.in/scbk/api/locationList', {
+        axios('https://starconcord.com.in/scbk/api/locationList', {
             headers: {
                 'Content-Type': 'application/json',
             },

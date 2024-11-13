@@ -17,7 +17,7 @@ const TransportSection = () => {
 
     const handleGetTransport = () => {
         setLoading(true);
-        axios("http://starconcord.com.in/scbk/api/homePage", {
+        axios("https://starconcord.com.in/scbk/api/homePage", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -60,7 +60,7 @@ const TransportSection = () => {
                     </div>
                     <div>
                         <Image
-                            src={`http://starconcord.com.in/scbk/uploads/${transport?.topBanner}`}
+                            src={`https://starconcord.com.in/scbk/uploads/${transport?.topBanner}`}
                             alt="banner"
                             loading="lazy"
                             width={800}

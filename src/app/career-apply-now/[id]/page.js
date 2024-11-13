@@ -87,7 +87,7 @@ const ApplyNowpage = () => {
         formData.append("resume", values.resume[0]);
         formData.append("jobId", values.jobId);
 
-        axios.post("http://starconcord.com.in/scbk/api/applyJob", formData, {
+        axios.post("https://starconcord.com.in/scbk/api/applyJob", formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
@@ -108,7 +108,7 @@ const ApplyNowpage = () => {
 
     const handleGetLocation = () => {
         setLoading(true);
-        axios("http://starconcord.com.in/scbk/api/jobLocations", {
+        axios("https://starconcord.com.in/scbk/api/jobLocations", {
             headers: {
                 "Content-Type": "application/json",
             },

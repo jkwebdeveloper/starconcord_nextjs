@@ -24,7 +24,7 @@ const BlogDetailsPage = () => {
 
     if (!id) return
     setLoading(true)
-    axios.get(`http://starconcord.com.in/scbk/api/blogList/${id}`, {
+    axios.get(`https://starconcord.com.in/scbk/api/blogList/${id}`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -95,7 +95,7 @@ const BlogDetailsPage = () => {
               ></div>
               {blogDetails?.blogImage && (
                 <Image
-                  src={`http://starconcord.com.in/scbk/uploads/${blogDetails.blogImage}`}
+                  src={`https://starconcord.com.in/scbk/uploads/${blogDetails.blogImage}`}
                   alt='banner'
                   loading="lazy"
                   width={650}
@@ -122,7 +122,7 @@ const BlogDetailsPage = () => {
                 {blogDetails?.image1 && (
                   <div className="">
                     <Image
-                      src={`http://starconcord.com.in/scbk/uploads/${blogDetails.image1}`}
+                      src={`https://starconcord.com.in/scbk/uploads/${blogDetails.image1}`}
                       alt="offer1"
                       loading="lazy"
                       width={500}

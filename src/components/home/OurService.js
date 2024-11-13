@@ -19,7 +19,7 @@ const OurService = () => {
 
   const handleGetService = () => {
     setLoading(true)
-    axios('http://starconcord.com.in/scbk/api/homePage', {
+    axios('https://starconcord.com.in/scbk/api/homePage', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -75,7 +75,7 @@ const OurService = () => {
                         >
                           <div className="flex">
                             <Image
-                              src={`http://starconcord.com.in/scbk/uploads/${item?.serviceIconImage}`}
+                              src={`https://starconcord.com.in/scbk/uploads/${item?.serviceIconImage}`}
                               // src="/static/images/Conveyor Belt 1 (2).png"
                               alt="unsplash"
                               loading="lazy"
