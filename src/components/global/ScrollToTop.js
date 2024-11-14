@@ -37,7 +37,7 @@ const ScrollToTop = () => {
     return (
         <>
             {isVisible && (
-                <div data-aos="fade-left" className="fixed z-50 flex items-end justify-end cursor-pointer right-7 bottom-10" onClick={goToBtn}>
+                <div data-aos="fade-left" className="fixed z-50 flex items-end justify-end cursor-pointer right-9 bottom-24" onClick={goToBtn}>
                     {/* <Lottie
                         animationData={scroll}
                         loop={true}
