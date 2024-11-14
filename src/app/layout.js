@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={instrument.className}>
         <Script
+        id="tawk-script" // Add an id here
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `

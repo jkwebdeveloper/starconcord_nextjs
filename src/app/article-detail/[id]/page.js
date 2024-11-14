@@ -41,7 +41,7 @@ const ArticleDetailspage = () => {
 
   useEffect(() => {
     handleGetArticlesDetails();
-  }, [id]);
+  }, [id, handleGetArticlesDetails]);
 
   return (
     <div className="container w-full pb-10 mx-auto lg:space-y-20 space-y-7">
