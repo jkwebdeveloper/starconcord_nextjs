@@ -1,8 +1,8 @@
-'use client'
-import axios from 'axios'
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import PageLoader from '../ui/pageloader'
+"use client";
+import axios from "axios";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import PageLoader from "../ui/pageloader";
 
 import {
   Carousel,
@@ -10,35 +10,50 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel'
-import Link from 'next/link'
+} from "@/components/ui/carousel";
+import Link from "next/link";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const OurService = () => {
-  const [service, setService] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [service, setService] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [showControls, setShowControls] = useState(false);
 
   const handleGetService = () => {
-    setLoading(true)
-    axios('https://starconcord.com.in/scbk/api/homePage', {
+    setLoading(true);
+    axios("https://starconcord.com.in/scbk/api/homePage", {
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      method: 'GET',
+      method: "GET",
     })
       .then((res) => {
-        setService(res.data.data)
-        setLoading(false)
+        setService(res.data.data);
+        setLoading(false);
       })
       .catch((err) => {
-        setLoading(false)
-      })
-  }
+        setLoading(false);
+      });
+  };
 
   useEffect(() => {
-    handleGetService()
-  }, [])
+    handleGetService();
+  }, []);
 
-  const showCarouselControls = service?.ourServices?.length >= 6
+  useEffect(() => {
+    const updateControlsVisibility = () => {
+      const isDesktop = window.innerWidth > 1023;
+      const hasEnoughItems = service?.ourServices?.length > 5;
+
+      // Show controls on mobile/tablet or on desktop if there are more than 5 items
+      setShowControls(!isDesktop || hasEnoughItems);
+    };
+
+    updateControlsVisibility();
+    window.addEventListener("resize", updateControlsVisibility);
+
+    return () => window.removeEventListener("resize", updateControlsVisibility);
+  }, [service]);
 
   return (
     <div className="w-full mx-auto space-y-6 text-center">
@@ -51,7 +66,7 @@ const OurService = () => {
         <div className="w-full">
           <Carousel
             opts={{
-              align: 'start',
+              align: "start",
               loop: true,
             }}
             className="w-full"
@@ -73,7 +88,7 @@ const OurService = () => {
                           className="bg-[#F7F9FB] rounded-lg p-5 pb-5 flex flex-col min-h-[350px]"
                           key={item.alias}
                         >
-                          <div className="flex">
+                          <div className="flex mx-auto">
                             <Image
                               src={`https://starconcord.com.in/scbk/uploads/${item?.serviceIconImage}`}
                               // src="/static/images/Conveyor Belt 1 (2).png"
@@ -90,6 +105,12 @@ const OurService = () => {
                               {item?.serviceName}
                             </p>
                           </div>
+                          <div className="flex items-center justify-center w-full gap-2">
+                            <p className="text-[#104B59] text-sm font-bold">
+                              READ MORE
+                            </p>
+                            <FaArrowRightLong className="text-[#104B59]" />
+                          </div>
                         </div>
                       </Link>
                     </>
@@ -99,17 +120,17 @@ const OurService = () => {
                 <p>No Services available</p>
               )}
             </CarouselContent>
-            {showCarouselControls && (
+            {showControls && (
               <>
-                <CarouselPrevious className="hidden lg:block" />
-                <CarouselNext className="hidden lg:block" />
+                <CarouselPrevious className="" />
+                <CarouselNext className="" />
               </>
             )}
           </Carousel>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default OurService
+export default OurService;

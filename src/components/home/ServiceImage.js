@@ -36,7 +36,7 @@ const ServiceImage = () => {
         <PageLoader />
       ) : (
         <>
-          <div className="relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl">
+          <div className="relative w-full mx-auto overflow-hidden lg:h-auto h-80 rounded-xl">
             <Image
               src={`https://starconcord.com.in/scbk/uploads/${serviceData?.bannerThree}`}
               alt="banner"

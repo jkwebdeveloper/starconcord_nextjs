@@ -60,9 +60,9 @@ const Locationpage = () => {
     handleGetLocationImages();
   }, []);
 
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     return null; // Avoid rendering before client-side is ready
-}
+  }
 
   return (
     <div className="container w-full pb-20 mx-auto lg:space-y-20 space-y-7">
@@ -121,14 +121,16 @@ const Locationpage = () => {
                               </p>
                             </Link>
                           </div>
-                          <div className="flex-col space-y-2 lg:flex-row">
-                            <p className="text-[#6C6C6C] text-lg font-medium">
-                              Fax number:
-                            </p>
-                            <p className="text-xl font-bold">
-                              {location.fxNumber}
-                            </p>
-                          </div>
+                          {location.fxNumber && (
+                            <div className="flex-col space-y-2 lg:flex-row">
+                              <p className="text-[#6C6C6C] text-lg font-medium">
+                                Fax number:
+                              </p>
+                              <p className="text-xl font-bold">
+                                {location.fxNumber}
+                              </p>
+                            </div>
+                          )}
                         </div>
                         <div className="grid items-start lg:grid-cols-2">
                           {location.email && (
