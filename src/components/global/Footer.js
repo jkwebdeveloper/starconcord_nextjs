@@ -3,9 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { ImLocation2 } from "react-icons/im";
-import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import Link from "next/link";
 import axios from "axios";
@@ -145,17 +143,29 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container px-10 py-4 mx-auto text-white">
+      <div className="container px-10 py-2 mx-auto text-white">
         <div className="flex flex-col items-center justify-between space-y-4 lg:flex-row">
           <p className="text-sm text-primary_color">
             © {new Date().getFullYear()}, Star Concord India Pvt Ltd, All Rights
             Reserved
           </p>
-          <div className="flex items-center gap-5">
-            <FaTwitter className="text-[#6C6C6C] cursor-pointer  hover:rounded-full p-3  text-5xl hover:bg-primary_color hover:text-white" />
-            <FaLinkedinIn className="text-[#6C6C6C] cursor-pointer  hover:rounded-full p-3  text-5xl hover:bg-primary_color hover:text-white" />
-            <FaInstagram className="text-[#6C6C6C] cursor-pointer  hover:rounded-full p-3  text-5xl hover:bg-primary_color hover:text-white" />
-            <FaFacebookF className="text-[#6C6C6C] cursor-pointer  hover:rounded-full p-3  text-5xl hover:bg-primary_color hover:text-white" />
+          <div className="flex items-center gap-5 ml-0 lg:mr-14">
+            <div className="text-[#6C6C6C] cursor-pointer  hover:rounded-full p-3  text-3xl hover:bg-primary_color hover:text-white">
+              <a
+                href="https://www.linkedin.com/company/star-concord-india/"
+                target="_blank"
+              >
+                <FaLinkedinIn className="" />
+              </a>
+            </div>
+            <div className="text-[#6C6C6C] cursor-pointer  hover:rounded-full p-3  text-3xl hover:bg-primary_color hover:text-white">
+              <a
+                href="https://www.facebook.com/profile.php?id=61564164363523"
+                target="_blank"
+              >
+                <FaFacebookF className="" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

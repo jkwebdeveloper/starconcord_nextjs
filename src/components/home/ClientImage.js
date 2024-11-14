@@ -99,7 +99,7 @@ const ClientImage = () => {
                                                     // src={`https://starconcord.com.in/scbk/uploads/${item.image}`}
                                                     alt="banner"
                                                     loading="lazy"
-                                                    layout="responsive"
+                                                    // layout="responsive"
                                                     // style={{ objectFit: 'cover' }}
                                                     width={50}
                                                     height={50}

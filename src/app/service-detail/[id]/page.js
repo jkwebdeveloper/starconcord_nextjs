@@ -26,7 +26,7 @@ const ServiceDetail = () => {
         if (id) {
             handleGetServiceDetail(id);
         }
-    }, [id, handleGetServiceDetail]);
+    }, [id]);
 
     const handleGetServiceDetail = (id) => {
         if (!id) return;
