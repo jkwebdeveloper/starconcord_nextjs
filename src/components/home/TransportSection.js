@@ -66,7 +66,7 @@ const TransportSection = () => {
                             width={800}
                             layout="responsive"
                             height={800}
-                            objectFit="cover"
+                            style={{ objectFit: 'cover' }}
                             className="object-cover rounded-xl "
                         />
                     </div>

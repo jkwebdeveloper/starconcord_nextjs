@@ -94,8 +94,8 @@ const OurService = () => {
                               // src="/static/images/Conveyor Belt 1 (2).png"
                               alt="unsplash"
                               loading="lazy"
-                              width={160}
-                              height={160}
+                              width={200}
+                              height={200}
                               className="object-cover"
                             />
                           </div>

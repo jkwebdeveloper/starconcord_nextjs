@@ -68,7 +68,7 @@ const IndustriesSection = () => {
                           alt={item?.industryName}
                           loading="lazy"
                           layout="fill"
-                          objectFit="cover"
+                          style={{ objectFit: 'cover' }}
                           quality={100}
                           className="z-0 object-cover transition-all duration-300 hover:scale-110"
                         />

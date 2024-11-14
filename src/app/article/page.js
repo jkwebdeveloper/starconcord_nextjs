@@ -57,8 +57,8 @@ const Article = () => {
                         src={`https://starconcord.com.in/scbk/uploads/${item?.image}`}
                         alt={item.title}
                         loading="lazy"
-                        fill
-                        objectFit="cover"
+                        layout="fill"
+                        style={{ objectFit: 'cover' }}
                         quality={100}
                       />
                     </div>

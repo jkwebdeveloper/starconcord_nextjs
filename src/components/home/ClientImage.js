@@ -72,8 +72,8 @@ const ClientImage = () => {
                             src={`https://starconcord.com.in/scbk/uploads/${images.bannerTwo}`}
                             alt=""
                             loading="lazy"
-                            fill
-                            objectFit="cover"
+                            layout="fill"
+                            style={{ objectFit: 'cover' }}
                             quality={100}
                             className="rounded-xl"
                         />
@@ -94,13 +94,13 @@ const ClientImage = () => {
                                                 className="w-full space-y-2 md:space-y-8"
                                                 key={item?._id}
                                             >
-                                                <image
+                                                <Image
                                                     src={'/static/images/testig.png'}
                                                     // src={`https://starconcord.com.in/scbk/uploads/${item.image}`}
                                                     alt="banner"
                                                     loading="lazy"
                                                     layout="responsive"
-                                                    // objectFit="cover"
+                                                    // style={{ objectFit: 'cover' }}
                                                     width={50}
                                                     height={50}
                                                     className=""
@@ -118,7 +118,7 @@ const ClientImage = () => {
                                                         alt="banner"
                                                         loading="lazy"
                                                         layout="responsive"
-                                                        // objectFit="cover"
+                                                        // style={{ objectFit: 'cover' }}
                                                         width={100}
                                                         height={100}
                                                         className="rounded-xl max-w-16"

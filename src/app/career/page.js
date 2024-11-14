@@ -87,7 +87,8 @@ const Careerpage = ({ title }) => {
       ) : (
         <div className="pb-10 space-y-10 lg:px-10">
           <div className="space-y-4">
-            <p className="text-3xl font-semibold">JOIN THE STAR CONCORD INDIA TEAM</p>
+            {/* <p className="text-3xl font-semibold capitalize">JOIN THE STAR CONCORD INDIA TEAM</p> */}
+            <p className="text-3xl font-semibold capitalize">Join The Starconcord India Team</p>
             <p className="text-base md:text-lg">
               Look forward to accelerating your career with STAR CONCORD? Join
               our dynamic, goal-oriented team of professionals and give your

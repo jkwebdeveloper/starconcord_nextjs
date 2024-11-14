@@ -65,8 +65,7 @@ const BlogPage = () => {
                       src={`https://starconcord.com.in/scbk/uploads/${item?.blogImage}`}
                       alt={item.title}
                       loading="lazy"
-                      layout="fill"
-                      objectFit="cover"
+                      style={{ objectFit: 'cover' }}
                       quality={100}
                     />
                   </div>

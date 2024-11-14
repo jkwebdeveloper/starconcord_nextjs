@@ -42,18 +42,12 @@ const HeroSection = () => {
         banners.bannerOne && (
           <>
             <div className="relative w-full mx-auto overflow-hidden lg:min-h-screen h-80 rounded-xl">
-              {console.log("Server URL:", process.env.NEXT_PUBLIC_SERVERURL)}
-              {console.log("Banner Image Path:", banners.bannerOne)}
-              {console.log("Banners object:", banners)}
-              {console.log(
-                `${process.env.NEXT_PUBLIC_SERVERURL}/${banners.bannerOne}`
-              )}
               <Image
                 src={`https://starconcord.com.in/scbk/uploads/${banners.bannerOne}`}
                 alt=""
                 loading="lazy"
                 layout="fill"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 quality={100}
                 className="z-0 object-cover transition-all duration-300 hover:scale-110"
               />

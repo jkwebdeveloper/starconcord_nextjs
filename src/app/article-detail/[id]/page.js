@@ -57,8 +57,8 @@ const ArticleDetailspage = () => {
               src="/static/images/page title img.jpg"
               alt="banner"
               loading="lazy"
-              fill
-              objectFit="cover"
+              layout="fill"
+              style={{ objectFit: 'cover' }}
               quality={100}
               className="rounded-2xl"
             />
@@ -91,8 +91,7 @@ const ArticleDetailspage = () => {
                     src={`https://starconcord.com.in/scbk/uploads/${articlesDetails?.image}`}
                     alt="banner"
                     loading="lazy"
-                    fill
-                    objectFit="cover"
+                    style={{ objectFit: 'cover' }}
                     quality={100}
                     className="rounded-2xl"
                   />

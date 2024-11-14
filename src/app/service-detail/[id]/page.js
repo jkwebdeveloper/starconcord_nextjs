@@ -84,7 +84,7 @@ const ServiceDetail = () => {
                     alt='banner'
                     loading="lazy"
                     layout="fill"
-                    objectFit="cover"
+                    style={{ objectFit: 'cover' }}
                     quality={100}
                     className="rounded-2xl"
                 />

@@ -24,7 +24,6 @@ const Footer = () => {
       method: "GET",
     })
       .then((res) => {
-        console.log("API Response:", res.data.data);
         setService(res.data.data || []);
         setLoading(false);
       })
