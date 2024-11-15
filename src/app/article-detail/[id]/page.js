@@ -41,7 +41,7 @@ const ArticleDetailspage = () => {
 
   useEffect(() => {
     handleGetArticlesDetails();
-  }, [id, handleGetArticlesDetails]);
+  }, [id]);
 
   return (
     <div className="container w-full pb-10 mx-auto lg:space-y-20 space-y-7">
@@ -91,6 +91,7 @@ const ArticleDetailspage = () => {
                     src={`https://starconcord.com.in/scbk/uploads/${articlesDetails?.image}`}
                     alt="banner"
                     loading="lazy"
+                    layout="fill"
                     style={{ objectFit: 'cover' }}
                     quality={100}
                     className="rounded-2xl"
