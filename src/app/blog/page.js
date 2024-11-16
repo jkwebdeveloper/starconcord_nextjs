@@ -60,11 +60,13 @@ const BlogPage = () => {
             {blogs.map((item) => (
               <Link href={`/blog-detail/${item.alias}`} key={item.alias}>
                 <div className="space-y-3">
-                  <div className="relative w-full overflow-hidden h-80 rounded-xl">
+                  <div className="relative w-full h-64 overflow-hidden rounded-xl">
                     <DynamicImage
                       src={`https://starconcord.com.in/scbk/uploads/${item?.blogImage}`}
                       alt={item.title}
                       loading="lazy"
+                      width={400}
+                      height={200}
                       style={{ objectFit: 'cover' }}
                       quality={100}
                     />
