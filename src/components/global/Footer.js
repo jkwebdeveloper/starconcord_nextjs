@@ -76,12 +76,12 @@ const Footer = () => {
                   <Link href="/contact-us">
                     <p className="mb-2">Contact Us</p>
                   </Link>
-                  <Link href="/blog">
+                  {/* <Link href="/blog">
                     <p className="mb-2">Blogs</p>
                   </Link>
                   <Link href="/article">
                     <p className="mb-2">Articles</p>
-                  </Link>
+                  </Link> */}
                   <Link href="/location">
                     <p>Location</p>
                   </Link>

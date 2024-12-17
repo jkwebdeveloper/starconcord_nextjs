@@ -329,8 +329,8 @@ const Header = () => {
               </div>
             </div>
             {[
-              { name: "Articles", href: "/article" },
-              { name: "Blogs", href: "/blog" },
+              // { name: "Articles", href: "/article" },
+              // { name: "Blogs", href: "/blog" },
               { name: "Contact us", href: "/contact-us" },
               { name: "Careers ", href: "/career" },
               { name: "Locations", href: "/location" },
